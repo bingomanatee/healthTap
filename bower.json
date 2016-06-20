@@ -1,0 +1,22 @@
+{
+  "name": "healthTap",
+  "description": "sample code",
+  "main": "src/index.html",
+  "authors": [
+    "Dave Edelhart"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "v4.0.0-alpha.2",
+    "roboto-fontface": "^0.5.0"
+  }
+}

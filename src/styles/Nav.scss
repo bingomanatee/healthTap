@@ -1,0 +1,23 @@
+@import './core';
+
+$nav-border-dist: 0.125rem;
+
+.nav-component {
+  background-color: darken($primary, 5%);
+  .nav-component__inner {
+    max-width: $content-width;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    width: 100%;
+    position: -webkit-sticky;
+    position: sticky;
+    .btn {
+      flex-grow: 1;
+      border-radius: 0;
+      margin-right: $nav-border-dist;
+      font-size: 10px;
+      text-transform: uppercase;
+    }
+  }
+}

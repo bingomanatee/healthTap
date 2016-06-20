@@ -1,0 +1,9 @@
+@import './core.scss';
+
+html, body {
+    background-color: $page-background-color;
+}
+
+* {
+  font-family: Roboto-Regular;
+}

@@ -1,0 +1,15 @@
+@import './core';
+
+.title-component {
+  display: flex;
+  flex-direction: row;
+  padding: $page-margin;
+  max-width: $content-width;
+}
+
+.title-component__logo {
+  flex-grow: 1;
+  .btn {
+    text-shadow: 0 1px 1px rgba(16, 121, 103, 0.46);
+  }
+}
