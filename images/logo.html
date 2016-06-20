@@ -1,0 +1,2620 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Cache-Control" content="no-cache">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+        <!-- Standard -->
+        <title>Zeplin - Project</title>
+        <meta name="description" content="Collaboration app for UI designers and frontend developers">
+        <meta name="keywords" content="designer, developer, UI, frontend, collaboration, photoshop, sketch, spec, color palette">
+        <meta name="author" content="Zeplin">
+        <link rel="canonical" href="https://zeplin.io">
+
+        <!-- Schema.org -->
+        <meta itemprop="name" content="Zeplin">
+        <meta itemprop="description" content="Collaboration app for UI designers and frontend developers">
+        <meta itemprop="url" content="https://zeplin.io">
+        <meta itemprop="keywords" content="designer, developer, UI, frontend, collaboration, photoshop, sketch, spec, color palette">
+        <meta itemprop="image" content="https://zeplin.io/img/favicon/228x228.png">
+        <meta itemprop="sourceOrganization" content="Zeplin">
+        <meta itemprop="inLanguage" content="en-US">
+
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@zeplin_io">
+
+        <!-- OpenGraph -->
+        <meta property="og:title" content="Zeplin">
+        <meta property="og:description" content="Collaboration app for UI designers and frontend developers">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://zeplin.io/">
+        <meta property="og:site_name" content="Zeplin">
+        <meta property="og:image" content="https://zeplin.io/img/favicon/228x228.png">
+        <meta property="og:locale" content="en_US">
+
+        <!-- Favicons -->
+        <!-- Standard -->
+        <meta name="theme-color" content="#FFFFFF">
+        <meta name="mobile-web-app-capable" content="yes">
+        <link rel="icon" type="image/png" href="img/favicon/16x16.png" sizes="16x16">
+        <link rel="icon" type="image/png" href="img/favicon/32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="img/favicon/48x48.png" sizes="48x48">
+        <link rel="icon" type="image/png" href="img/favicon/64x64.png" sizes="64x64">
+        <link rel="icon" type="image/png" href="img/favicon/96x96.png" sizes="96x96">
+        <link rel="icon" type="image/png" href="img/favicon/128x128.png" sizes="128x128">
+        <link rel="icon" type="image/png" href="img/favicon/160x160.png" sizes="160x160">
+        <link rel="icon" type="image/png" href="img/favicon/196x196.png" sizes="196x196">
+        <link rel="icon" type="image/png" href="img/favicon/228x228.png" sizes="228x228">
+        <link rel="icon" type="image/png" href="img/favicon/256x256.png" sizes="256x256">
+        <link rel="shortcut icon" href="img/favicon/favicon.ico">
+
+        <!-- Apple -->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-startup-image" href="img/favicon/320x480.png">
+        <meta name="apple-mobile-web-app-title" content="Zeplin">
+        <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/57x57.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/114x114.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/60x60.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="img/favicon/120x120.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/72x72.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="img/favicon/144x144.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/76x76.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/152x152.png">
+
+        <!-- Microsoft -->
+        <meta name="application-name" content="Zeplin">
+        <meta name="msapplication-tooltip" content="Zeplin">
+        <meta name="msapplication-window" content="width=1024;height=768">
+        <meta name="msapplication-navbutton-color" content="#EE6723">
+        <meta name="msapplication-starturl" content="https://zeplin.io/">
+        <meta name="msapplication-TileColor" content="#FFFFFF">
+        <meta name="msapplication-TileImage" content="img/favicon/144x144.png">
+        <meta name="msapplication-config" content="browserconfig.xml">
+
+        <!-- Polyfills -->
+        <script src="js/polyfill/fetch.js?t=1465986800245" defer></script>
+        <script src="js/polyfill/encoding.js?t=1465986800245" defer></script>
+        <link rel="stylesheet" type="text/css" href="css/polyfill/dialog-polyfill.css?t=1465986800245">
+
+        <!-- Components -->
+        <script src="components/webcomponents-lite.min.js?t=1465986800245"></script>
+        <script src="components/time-elements.js?t=1465986800245"></script>
+        <link rel="import" href="components/paper-elements/paper-ripple/paper-ripple.html">
+
+        <link rel="stylesheet" type="text/css" href="css/zeplin.css?t=1465986800245">
+        <link rel="stylesheet" type="text/css" href="css/dialog.css?t=1465986800245">
+        <link rel="stylesheet" type="text/css" href="css/app.css?t=1465986800245">
+        <link rel="stylesheet" type="text/css" href="css/notifications.css?t=1465986800245">
+        <link rel="stylesheet" type="text/css" href="css/project.css?t=1465986800245">
+        <link rel="stylesheet" type="text/css" href="css/pay.css?t=1465986800245">
+        <link rel="stylesheet" type="text/css" href="css/exportProgresses.css?t=1465986800245">
+
+        <!-- Libs -->
+        <script src="js/lib/cookies.min.js?t=1465986800245" defer></script>
+        <script src="js/lib/jszip.min.js?t=1465986800245" defer></script>
+        <script src="js/lib/Autolinker.min.js?t=1465986800245" defer></script>
+
+        <!-- TODO: load conditionally -->
+        <link rel="stylesheet" type="text/css" href="css/lib/codemirror/codemirror.css?t=1465986800245">
+        <link rel="stylesheet" type="text/css" href="css/lib/codemirror/theme-zeplin.css?t=1465986800245">
+        <script src="js/lib/codemirror/codemirror.js?t=1465986800245" defer></script>
+        <script src="js/lib/codemirror/mode/css.js?t=1465986800245" defer></script>
+        <script src="js/lib/codemirror/mode/sass.js?t=1465986800245" defer></script>
+        <script src="js/lib/codemirror/mode/stylus.js?t=1465986800245" defer></script>
+        <script src="js/lib/codemirror/mode/xml.js?t=1465986800245" defer></script>
+        <script src="js/lib/codemirror/mode/clike.js?t=1465986800245" defer></script>
+        <script src="js/lib/codemirror/mode/swift.js?t=1465986800245" defer></script>
+        <script src="js/lib/codemirror/addon/selection/mark-selection.js?t=1465986800245" defer></script>
+
+        <!-- External libs -->
+        <script src="https://widget.intercom.io/widget/41ycdg94" defer></script>
+        <script src="https://checkout.stripe.com/checkout.js" defer></script>
+
+        <script src="js/common.js?t=1465986800245" defer></script>
+        <script src="js/CSSUtil.js?t=1465986800245" defer></script>
+        <script src="js/model/color.js?t=1465986800245" defer></script>
+        <script src="js/model/colorStop.js?t=1465986800245" defer></script>
+        <script src="js/model/gradient.js?t=1465986800245" defer></script>
+        <script src="js/model/blur.js?t=1465986800245" defer></script>
+        <script src="js/model/fill.js?t=1465986800245" defer></script>
+        <script src="js/model/border.js?t=1465986800245" defer></script>
+        <script src="js/model/shadow.js?t=1465986800245" defer></script>
+        <script src="js/model/layer.js?t=1465986800245" defer></script>
+        <script src="js/model/font.js?t=1465986800245" defer></script>
+        <script src="js/exportProgresses.js?t=1465986800245" defer></script>
+        <script data-main="js/project.js?t=1465986796276" src="js/lib/require.js?t=1465986800245" defer></script>
+    </head>
+    <body>
+        <div id="verificationBanner" class="banner hidden">
+            <span></span>
+            <span>Your email is not verified yet. Please check your inbox.</span>
+            <img src="img/icClose.svg" alt="×" id="verificationBannerCloseButton" class="bannerCloseButton">
+        </div>
+        <div id="notificationBanner" class="banner hidden">
+            <span></span>
+            <span>Zeplin needs your permission to <span class="underline">enable desktop notifications</span></span>
+            <img src="img/icClose.svg" alt="×" id="notificationBannerCloseButton" class="bannerCloseButton">
+        </div>
+        <template class="notificationTemplate undefinedNotification">
+            <div class="notification undefinedNotification">
+                <time is="time-ago" format="micro" class="notificationLastUpdated"></time>
+            </div>
+        </template>
+        <template class="notificationTemplate createDotSingleUser">
+            <a class="notification createDotSingleUser">
+                <div class="notificationIcon">
+                    <div class="gravatarFrame dotAuthorImageFrame">
+                        <img width="36" height="36" alt="&#x1f464;" crossorigin="anonymous" class="dotAuthorImage">
+                    </div>
+                    <img src="img/ntf/icNote.svg" alt="&#x270f;" class="notificationSubIcon">
+                </div>
+                <div class="notificationBody">
+                    <h4>
+                        <span class="dotAuthor"></span> added <span class="dotCount"></span> to <span class="screenName"></span>
+                    </h4>
+                    <div class="notificationContent"></div>
+                    <div class="notificationFooter">
+                        <div class="notificationProject">
+                            <span class="notificationProjectName"></span> • <span class="notificationProjectType"></span>
+                        </div>
+                        <time is="time-ago" format="micro" class="notificationLastUpdated"></time>
+                    </div>
+                </div>
+            </a>
+        </template>
+        <template class="notificationTemplate createDotMultiUser">
+            <a class="notification createDotMultiUser">
+                <div class="notificationIcon">
+                    <img src="img/ntf/icGroupMembers.png"
+                         srcset="img/ntf/icGroupMembers@2x.png 2x, img/ntf/icGroupMembers@3x.png 3x"
+                         alt="&#x1f468;&#x200d;&#x1f469;&#x200d;&#x1f466;&#x200d;&#x1f466;"
+                         class="multiMemberIcon">
+                    <img src="img/ntf/icNote.svg" alt="&#x270f;" class="notificationSubIcon">
+                </div>
+                <div class="notificationBody">
+                    <div class="notificationContent">
+                        <span class="headUsernames"></span><span class="tailUsername"></span> added <span class="dotCount"></span> to <span class="screenName"></span>.
+                    </div>
+                    <div class="notificationFooter">
+                        <div class="notificationProject">
+                            <span class="notificationProjectName"></span> • <span class="notificationProjectType"></span>
+                        </div>
+                        <time is="time-ago" format="micro" class="notificationLastUpdated"></time>
+                    </div>
+                </div>
+            </a>
+        </template>
+        <template class="notificationTemplate createCommentSingleUser">
+            <a class="notification createCommentSingleUser">
+                <div class="notificationIcon">
+                    <div class="gravatarFrame commentAuthorImageFrame">
+                        <img width="36" height="36" alt="&#x1f464;" crossorigin="anonymous" class="commentAuthorImage">
+                    </div>
+                    <img src="img/ntf/icNote.svg" alt="&#x270f;" class="notificationSubIcon">
+                </div>
+                <div class="notificationBody">
+                    <h4>
+                        <span class="commentAuthor"></span> replied to note <span class="noteName"></span> on <span class="screenName"></span>
+                    </h4>
+                    <div class="notificationContent"></div>
+                    <div class="notificationFooter">
+                        <div class="notificationProject">
+                            <span class="notificationProjectName"></span> • <span class="notificationProjectType"></span>
+                        </div>
+                        <time is="time-ago" format="micro" class="notificationLastUpdated"></time>
+                    </div>
+                </div>
+            </a>
+        </template>
+        <template class="notificationTemplate createCommentMultiUser">
+            <a class="notification createCommentMultiUser">
+                <div class="notificationIcon">
+                    <img src="img/ntf/icGroupMembers.png"
+                         srcset="img/ntf/icGroupMembers@2x.png 2x, img/ntf/icGroupMembers@3x.png 3x"
+                         alt="&#x1f468;&#x200d;&#x1f469;&#x200d;&#x1f466;&#x200d;&#x1f466;"
+                         class="multiMemberIcon">
+                    <img src="img/ntf/icNote.svg" alt="&#x270f;" class="notificationSubIcon">
+                </div>
+                <div class="notificationBody">
+                    <div class="notificationContent">
+                        <span class="headUsernames"></span><span class="tailUsername"></span> replied to note <span class="noteName"></span> on <span class="screenName"></span>.
+                    </div>
+                    <div class="notificationFooter">
+                        <div class="notificationProject">
+                            <span class="notificationProjectName"></span> • <span class="notificationProjectType"></span>
+                        </div>
+                        <time is="time-ago" format="micro" class="notificationLastUpdated"></time>
+                    </div>
+                </div>
+            </a>
+        </template>
+        <template class="notificationTemplate commentMention">
+            <a class="notification commentMention">
+                <div class="notificationIcon">
+                    <div class="gravatarFrame mentionAuthorImageFrame">
+                        <img width="36" height="36" alt="&#x1f464;" crossorigin="anonymous" class="mentionAuthorImage">
+                    </div>
+                    <img src="img/ntf/icMention.png"
+                         srcset="img/ntf/icMention@2x.png 2x, img/ntf/icMention@3x.png 3x"
+                         alt="&#x1f449;"
+                         class="notificationSubIcon">
+                </div>
+                <div class="notificationBody">
+                    <h4>
+                        <span class="mentionAuthor"></span> mentioned you in note <span class="noteName"></span> on <span class="screenName"></span>:
+                    </h4>
+                    <div class="notificationContent"></div>
+                    <div class="notificationFooter">
+                        <div class="notificationProject">
+                            <span class="notificationProjectName"></span> • <span class="notificationProjectType"></span>
+                        </div>
+                        <time is="time-ago" format="micro" class="notificationLastUpdated"></time>
+                    </div>
+                </div>
+            </a>
+        </template>
+        <template class="notificationTemplate createScreen">
+            <a class="notification createScreen">
+                <div class="notificationIcon">
+                    <div class="gravatarFrame notifierImageFrame">
+                        <img width="36" height="36" alt="&#x1f464;" crossorigin="anonymous" class="notifierImage">
+                    </div>
+                    <img src="img/ntf/icAdd.svg" alt="+" class="notificationSubIcon">
+                </div>
+                <div class="notificationBody">
+                    <div class="notificationContent">
+                        <span class="notifier"></span> added a screen: <span class="screenName"></span>
+                    </div>
+                    <div class="notificationFooter">
+                        <div class="notificationProject">
+                            <span class="notificationProjectName"></span> • <span class="notificationProjectType"></span>
+                        </div>
+                        <time is="time-ago" format="micro" class="notificationLastUpdated"></time>
+                    </div>
+                </div>
+            </a>
+        </template>
+        <template class="notificationTemplate createScreenMulti">
+            <a class="notification createScreenMulti">
+                <div class="notificationIcon">
+                    <div class="gravatarFrame notifierImageFrame">
+                        <img width="36" height="36" alt="&#x1f464;" crossorigin="anonymous" class="notifierImage">
+                    </div>
+                    <img src="img/ntf/icAdd.svg" alt="+" class="notificationSubIcon">
+                </div>
+                <div class="notificationBody">
+                    <div class="notificationContent">
+                        <span class="notifier"></span> added <span class="screenCount"></span>.
+                    </div>
+                    <div class="notificationFooter">
+                        <div class="notificationProject">
+                            <span class="notificationProjectName"></span> • <span class="notificationProjectType"></span>
+                        </div>
+                        <time is="time-ago" format="micro" class="notificationLastUpdated"></time>
+                    </div>
+                </div>
+            </a>
+        </template>
+        <template class="notificationTemplate updateScreen">
+            <a class="notification updateScreen">
+                <div class="notificationIcon">
+                    <div class="gravatarFrame notifierImageFrame">
+                        <img width="36" height="36" alt="&#x1f464;" crossorigin="anonymous" class="notifierImage">
+                    </div>
+                    <img src="img/ntf/icAdd.svg" alt="+" class="notificationSubIcon">
+                </div>
+                <div class="notificationBody">
+                    <div class="notificationContent">
+                        <span class="notifier"></span> updated a screen: <span class="screenName"></span>
+                    </div>
+                    <div class="notificationFooter">
+                        <div class="notificationProject">
+                            <span class="notificationProjectName"></span> • <span class="notificationProjectType"></span>
+                        </div>
+                        <time is="time-ago" format="micro" class="notificationLastUpdated"></time>
+                    </div>
+                </div>
+            </a>
+        </template>
+        <template class="notificationTemplate updateScreenMulti">
+            <a class="notification updateScreenMulti">
+                <div class="notificationIcon">
+                    <div class="gravatarFrame notifierImageFrame">
+                        <img width="36" height="36" alt="&#x1f464;" crossorigin="anonymous" class="notifierImage">
+                    </div>
+                    <img src="img/ntf/icAdd.svg" alt="+" class="notificationSubIcon">
+                </div>
+                <div class="notificationBody">
+                    <div class="notificationContent">
+                        <span class="notifier"></span> updated <span class="screenCount"></span>.
+                    </div>
+                    <div class="notificationFooter">
+                        <div class="notificationProject">
+                            <span class="notificationProjectName"></span> • <span class="notificationProjectType"></span>
+                        </div>
+                        <time is="time-ago" format="micro" class="notificationLastUpdated"></time>
+                    </div>
+                </div>
+            </a>
+        </template>
+        <template class="notificationTemplate deleteScreen">
+            <div class="notification deleteScreen">
+                <div class="notificationIcon">
+                    <div class="gravatarFrame notifierImageFrame">
+                        <img width="36" height="36" alt="&#x1f464;" crossorigin="anonymous" class="notifierImage">
+                    </div>
+                    <img src="img/ntf/icDelete.svg" alt="–" class="notificationSubIcon">
+                </div>
+                <div class="notificationBody">
+                    <div class="notificationContent">
+                        <span class="notifier"></span> deleted a screen: <span class="screenName"></span>
+                    </div>
+                    <div class="notificationFooter">
+                        <div class="notificationProject">
+                            <span class="notificationProjectName"></span> • <span class="notificationProjectType"></span>
+                        </div>
+                        <time is="time-ago" format="micro" class="notificationLastUpdated"></time>
+                    </div>
+                </div>
+            </div>
+        </template>
+        <template class="notificationTemplate deleteScreenMulti">
+            <div class="notification deleteScreenMulti">
+                <div class="notificationIcon">
+                    <div class="gravatarFrame notifierImageFrame">
+                        <img width="36" height="36" alt="&#x1f464;" crossorigin="anonymous" class="notifierImage">
+                    </div>
+                    <img src="img/ntf/icDelete.svg" alt="–" class="notificationSubIcon">
+                </div>
+                <div class="notificationBody">
+                    <div class="notificationContent">
+                        <span class="notifier"></span> deleted <span class="screenCount"></span>.
+                    </div>
+                    <div class="notificationFooter">
+                        <div class="notificationProject">
+                            <span class="notificationProjectName"></span> • <span class="notificationProjectType"></span>
+                        </div>
+                        <time is="time-ago" format="micro" class="notificationLastUpdated"></time>
+                    </div>
+                </div>
+            </div>
+        </template>
+        <template class="notificationTemplate inviteUser">
+            <a class="notification inviteUser">
+                <div class="notificationIcon">
+                    <div class="gravatarFrame notifierImageFrame">
+                        <img width="36" height="36" alt="&#x1f464;" crossorigin="anonymous" class="notifierImage">
+                    </div>
+                    <img src="img/ntf/icPerson.svg" alt="&#x1f464;" class="notificationSubIcon">
+                </div>
+                <div class="notificationBody">
+                    <div class="notificationContent">
+                        <span class="notifier"></span> invited you to <span class="projectName"></span>.
+                    </div>
+                    <div class="notificationFooter">
+                        <time is="time-ago" format="micro" class="notificationLastUpdated"></time>
+                    </div>
+                </div>
+            </a>
+        </template>
+        <template class="notificationTemplate inviteUserMulti">
+            <a class="notification inviteUserMulti">
+                <div class="notificationIcon">
+                    <div class="gravatarFrame notifierImageFrame">
+                        <img width="36" height="36" alt="&#x1f464;" crossorigin="anonymous" class="notifierImage">
+                    </div>
+                    <img src="img/ntf/icPerson.svg" alt="&#x1f464;" class="notificationSubIcon">
+                </div>
+                <div class="notificationBody">
+                    <div class="notificationContent">
+                        <span class="notifier"></span> invited you to <span class="projectCount"></span> projects: <span class="headProjects"></span><span class="tailProject"></span>
+                    </div>
+                    <div class="notificationFooter">
+                        <time is="time-ago" format="micro" class="notificationLastUpdated"></time>
+                    </div>
+                </div>
+            </a>
+        </template>
+        <template class="notificationTemplate removeUser">
+            <div class="notification removeUser">
+                <div class="notificationIcon">
+                    <div class="gravatarFrame notifierImageFrame">
+                        <img width="36" height="36" alt="&#x1f464;" crossorigin="anonymous" class="notifierImage">
+                    </div>
+                    <img src="img/ntf/icDelete.svg" alt="–" class="notificationSubIcon">
+                </div>
+                <div class="notificationBody">
+                    <div class="notificationContent">
+                        <span class="notifier"></span> removed you from <span class="projectName"></span>.
+                    </div>
+                    <div class="notificationFooter">
+                        <time is="time-ago" format="micro" class="notificationLastUpdated"></time>
+                    </div>
+                </div>
+            </div>
+        </template>
+        <template class="notificationTemplate newMember">
+            <a class="notification newMember">
+                <div class="notificationIcon">
+                    <div class="gravatarFrame newMemberImageFrame">
+                        <img width="36" height="36" alt="&#x1f464;" crossorigin="anonymous" class="newMemberImage">
+                    </div>
+                    <img src="img/ntf/icPerson.svg" alt="&#x1f464;" class="notificationSubIcon">
+                </div>
+                <div class="notificationBody">
+                    <div class="notificationContent">
+                        <span class="memberUsername"></span> joined <span class="projectName"></span>.
+                    </div>
+                    <div class="notificationFooter">
+                        <time is="time-ago" format="micro" class="notificationLastUpdated"></time>
+                    </div>
+                </div>
+            </a>
+        </template>
+        <template class="notificationTemplate newMemberMulti">
+            <a class="notification newMemberMulti">
+                <div class="notificationIcon">
+                    <img src="img/ntf/icGroupMembers.png"
+                         srcset="img/ntf/icGroupMembers@2x.png 2x, img/ntf/icGroupMembers@3x.png 3x"
+                         alt="&#x1f468;&#x200d;&#x1f469;&#x200d;&#x1f466;&#x200d;&#x1f466;"
+                         class="multiMemberIcon">
+                    <img src="img/ntf/icPerson.svg" alt="&#x1f464;" class="notificationSubIcon">
+                </div>
+                <div class="notificationBody">
+                    <div class="notificationContent">
+                        <span class="headUsernames"></span> and <span class="tailUsername"></span> joined <span class="projectName"></span>.
+                    </div>
+                    <div class="notificationFooter">
+                        <time is="time-ago" format="micro" class="notificationLastUpdated"></time>
+                    </div>
+                </div>
+            </a>
+        </template>
+        <template class="notificationTemplate deleteProject">
+            <div class="notification deleteProject">
+                <div class="notificationIcon">
+                    <div class="gravatarFrame notifierImageFrame">
+                        <img width="36" height="36" alt="&#x1f464;" crossorigin="anonymous" class="notifierImage">
+                    </div>
+                    <img src="img/ntf/icDelete.svg" alt="–" class="notificationSubIcon">
+                </div>
+                <div class="notificationBody">
+                    <div class="notificationContent">
+                        <span class="notifier"></span> deleted a project: <span class="projectName"></span>
+                    </div>
+                    <div class="notificationFooter">
+                        <time is="time-ago" format="micro" class="notificationLastUpdated"></time>
+                    </div>
+                </div>
+            </div>
+        </template>
+        <template class="notificationTemplate archiveProject">
+            <div class="notification archiveProject">
+                <div class="notificationIcon">
+                    <div class="gravatarFrame notifierImageFrame">
+                        <img width="36" height="36" alt="&#x1f464;" crossorigin="anonymous" class="notifierImage">
+                    </div>
+                    <img src="img/ntf/icArchive.svg" alt="&#x1f4e5;" class="notificationSubIcon">
+                </div>
+                <div class="notificationBody">
+                    <div class="notificationContent">
+                        <span class="notifier"></span> archived a project: <span class="projectName"></span>
+                    </div>
+                    <div class="notificationFooter">
+                        <time is="time-ago" format="micro" class="notificationLastUpdated"></time>
+                    </div>
+                </div>
+            </div>
+        </template>
+        <template class="notificationTemplate activateProject">
+            <a class="notification activateProject">
+                <div class="notificationIcon">
+                    <div class="gravatarFrame notifierImageFrame">
+                        <img width="36" height="36" alt="&#x1f464;" crossorigin="anonymous" class="notifierImage">
+                    </div>
+                    <img src="img/ntf/icActivate.svg" alt="&#x1f4e4;" class="notificationSubIcon">
+                </div>
+                <div class="notificationBody">
+                    <div class="notificationContent">
+                        <span class="notifier"></span> activated a project: <span class="projectName"></span>
+                    </div>
+                    <div class="notificationFooter">
+                        <time is="time-ago" format="micro" class="notificationLastUpdated"></time>
+                    </div>
+                </div>
+            </a>
+        </template>
+        <template class="notificationTemplate assignAdmin">
+            <a class="notification assignAdmin">
+                <div class="notificationIcon">
+                    <div class="gravatarFrame notifierImageFrame">
+                        <img width="36" height="36" alt="&#x1f464;" crossorigin="anonymous" class="notifierImage">
+                    </div>
+                    <img src="img/ntf/icAdmin.png"
+                         srcset="img/ntf/icAdmin@2x.png 2x, img/ntf/icAdmin@3x.png 3x"
+                         alt="&#x1f4aa;"
+                         class="notificationSubIcon">
+                </div>
+                <div class="notificationBody">
+                    <div class="notificationContent">
+                        <span class="notifier"></span> assigned you as an admin on <span class="projectName"></span>.
+                    </div>
+                    <div class="notificationFooter">
+                        <time is="time-ago" format="micro" class="notificationLastUpdated"></time>
+                    </div>
+                </div>
+            </a>
+        </template>
+        <template class="notificationTemplate assignAdminMulti">
+            <a class="notification assignAdminMulti">
+                <div class="notificationIcon">
+                    <div class="gravatarFrame notifierImageFrame">
+                        <img width="36" height="36" alt="&#x1f464;" crossorigin="anonymous" class="notifierImage">
+                    </div>
+                    <img src="img/ntf/icAdmin.png"
+                         srcset="img/ntf/icAdmin@2x.png 2x, img/ntf/icAdmin@3x.png 3x"
+                         alt="&#x1f4aa;"
+                         class="notificationSubIcon">
+                </div>
+                <div class="notificationBody">
+                    <div class="notificationContent">
+                        <span class="notifier"></span> assigned you as an admin on <span class="projectCount"></span> projects: <span class="headProjects"></span><span class="tailProject"></span>
+                    </div>
+                    <div class="notificationFooter">
+                        <time is="time-ago" format="micro" class="notificationLastUpdated"></time>
+                    </div>
+                </div>
+            </a>
+        </template>
+        <template class="notificationTemplate transferOwnership">
+            <a class="notification transferOwnership">
+                <div class="notificationIcon">
+                    <div class="gravatarFrame notifierImageFrame">
+                        <img width="36" height="36" alt="&#x1f464;" crossorigin="anonymous" class="notifierImage">
+                    </div>
+                    <img src="img/ntf/icTransfer.svg" alt="&#x21c6;" class="notificationSubIcon">
+                </div>
+                <div class="notificationBody">
+                    <div class="notificationContent">
+                        <span class="notifier"></span> transfered the ownership of <span class="projectName"></span> to you.
+                    </div>
+                    <div class="notificationFooter">
+                        <time is="time-ago" format="micro" class="notificationLastUpdated"></time>
+                    </div>
+                </div>
+            </a>
+        </template>
+        <template class="notificationTemplate createColor">
+            <a class="notification createColor">
+                <div class="notificationIcon colorPreview">
+                    <img src="img/ntf/icAdd.svg" alt="+" class="notificationSubIcon">
+                </div>
+                <div class="notificationBody">
+                    <div class="notificationContent">
+                        <span class="notifier"></span> added a color: <span class="notificationColorName"></span>
+                    </div>
+                    <div class="notificationFooter">
+                        <div class="notificationProject">
+                            <span class="notificationProjectName"></span> • <span class="notificationProjectType"></span>
+                        </div>
+                        <time is="time-ago" format="micro" class="notificationLastUpdated"></time>
+                    </div>
+                </div>
+            </a>
+        </template>
+        <template class="notificationTemplate createColorMulti">
+            <a class="notification createColorMulti">
+                <div class="notificationIcon">
+                    <img src="img/ntf/icGroupColors.png"
+                         srcset="img/ntf/icGroupColors@2x.png 2x, img/ntf/icGroupColors@3x.png 3x"
+                         alt="&#x1F3A8;"
+                         class="multiColorIcon">
+                    <img src="img/ntf/icAdd.svg" alt="+" class="notificationSubIcon">
+                </div>
+                <div class="notificationBody">
+                    <div class="notificationContent">
+                        <span class="notifier"></span> added <span class="colorCount"></span>.
+                    </div>
+                    <div class="notificationFooter">
+                        <div class="notificationProject">
+                            <span class="notificationProjectName"></span> • <span class="notificationProjectType"></span>
+                        </div>
+                        <time is="time-ago" format="micro" class="notificationLastUpdated"></time>
+                    </div>
+                </div>
+            </a>
+        </template>
+        <template class="notificationTemplate deleteColor">
+            <div class="notification deleteColor">
+                <div class="notificationIcon colorPreview">
+                    <img src="img/ntf/icDelete.svg" alt="–" class="notificationSubIcon">
+                </div>
+                <div class="notificationBody">
+                    <div class="notificationContent">
+                        <span class="notifier"></span> removed a color: <span class="notificationColorName"></span>
+                    </div>
+                    <div class="notificationFooter">
+                        <div class="notificationProject">
+                            <span class="notificationProjectName"></span> • <span class="notificationProjectType"></span>
+                        </div>
+                        <time is="time-ago" format="micro" class="notificationLastUpdated"></time>
+                    </div>
+                </div>
+            </div>
+        </template>
+        <template class="notificationTemplate deleteColorMulti">
+            <div class="notification deleteColorMulti">
+                <div class="notificationIcon">
+                    <img src="img/ntf/icGroupColors.png"
+                         srcset="img/ntf/icGroupColors@2x.png 2x, img/ntf/icGroupColors@3x.png 3x"
+                         alt="&#x1F3A8;"
+                         class="multiColorIcon">
+                    <img src="img/ntf/icDelete.svg" alt="–" class="notificationSubIcon">
+                </div>
+                <div class="notificationBody">
+                    <div class="notificationContent">
+                        <span class="notifier"></span> removed <span class="colorCount"></span>.
+                    </div>
+                    <div class="notificationFooter">
+                        <div class="notificationProject">
+                            <span class="notificationProjectName"></span> • <span class="notificationProjectType"></span>
+                        </div>
+                        <time is="time-ago" format="micro" class="notificationLastUpdated"></time>
+                    </div>
+                </div>
+            </div>
+        </template>
+        <template class="notificationTemplate updateColor">
+            <a class="notification updateColor">
+                <div class="notificationIcon colorPreview">
+                    <img src="img/ntf/icAdd.svg" alt="+" class="notificationSubIcon">
+                </div>
+                <div class="notificationBody">
+                    <div class="notificationContent">
+                        <span class="notifier"></span> updated a color: <span class="notificationColorName"></span>
+                    </div>
+                    <div class="notificationFooter">
+                        <div class="notificationProject">
+                            <span class="notificationProjectName"></span> • <span class="notificationProjectType"></span>
+                        </div>
+                        <time is="time-ago" format="micro" class="notificationLastUpdated"></time>
+                    </div>
+                </div>
+            </a>
+        </template>
+        <template class="notificationTemplate updateColorMulti">
+            <a class="notification updateColorMulti">
+                <div class="notificationIcon">
+                    <img src="img/ntf/icGroupColors.png"
+                         srcset="img/ntf/icGroupColors@2x.png 2x, img/ntf/icGroupColors@3x.png 3x"
+                         alt="&#x1F3A8;"
+                         class="multiColorIcon">
+                    <img src="img/ntf/icAdd.svg" alt="+" class="notificationSubIcon">
+                </div>
+                <div class="notificationBody">
+                    <div class="notificationContent">
+                        <span class="notifier"></span> updated <span class="colorCount"></span>.
+                    </div>
+                    <div class="notificationFooter">
+                        <div class="notificationProject">
+                            <span class="notificationProjectName"></span> • <span class="notificationProjectType"></span>
+                        </div>
+                        <time is="time-ago" format="micro" class="notificationLastUpdated"></time>
+                    </div>
+                </div>
+            </a>
+        </template>
+        <template class="notificationTemplate createCoupon">
+            <a class="notification createCoupon">
+                <div class="notificationStar">
+                    <img src="img/ntf/icStar.svg" alt="&#x2b50;" class="notificationImage">
+                </div>
+                <div class="notificationContent"></div>
+                <time is="time-ago" format="micro" class="notificationLastUpdated"></time>
+            </a>
+        </template>
+        <template class="notificationTemplate authSlack">
+            <a class="notification authSlack">
+                <div class="notificationIcon">
+                    <img src="img/ntf/icSlack.png"
+                         srcset="img/ntf/icSlack@2x.png 2x, img/ntf/icSlack@3x.png 3x"
+                         alt="#"
+                         class="slackIcon">
+                </div>
+                <div class="notificationBody">
+                    <div class="notificationContent">
+                        <span class="notifier"></span> connected <span class="projectName"></span> to Slack channel <span class="slackChannel"></span>.
+                    </div>
+                    <div class="notificationFooter">
+                        <time is="time-ago" format="micro" class="notificationLastUpdated"></time>
+                    </div>
+                </div>
+            </a>
+        </template>
+        <template class="notificationTemplate createFont">
+            <a class="notification createFont">
+                <div class="notificationIcon">
+                    <img src="img/ntf/icTextStyles.png"
+                         srcset="img/ntf/icTextStyles@2x.png 2x, img/ntf/icTextStyles@3x.png 3x"
+                         alt="&#x270f;">
+                    <img src="img/ntf/icAdd.svg" alt="+" class="notificationSubIcon">
+                </div>
+                <div class="notificationBody">
+                    <div class="notificationContent">
+                        <span class="notifier"></span> added a text style: <span class="notificationFontName"></span>
+                    </div>
+                    <div class="notificationFooter">
+                        <div class="notificationProject">
+                            <span class="notificationProjectName"></span> • <span class="notificationProjectType"></span>
+                        </div>
+                        <time is="time-ago" format="micro" class="notificationLastUpdated"></time>
+                    </div>
+                </div>
+            </a>
+        </template>
+        <template class="notificationTemplate createFontMulti">
+            <a class="notification createFontMulti">
+                <div class="notificationIcon">
+                    <img src="img/ntf/icTextStyles.png"
+                         srcset="img/ntf/icTextStyles@2x.png 2x, img/ntf/icTextStyles@3x.png 3x"
+                         alt="&#x270f;">
+                    <img src="img/ntf/icAdd.svg" alt="+" class="notificationSubIcon">
+                </div>
+                <div class="notificationBody">
+                    <div class="notificationContent">
+                        <span class="notifier"></span> added <span class="fontCount"></span>.
+                    </div>
+                    <div class="notificationFooter">
+                        <div class="notificationProject">
+                            <span class="notificationProjectName"></span> • <span class="notificationProjectType"></span>
+                        </div>
+                        <time is="time-ago" format="micro" class="notificationLastUpdated"></time>
+                    </div>
+                </div>
+            </a>
+        </template>
+        <template class="notificationTemplate deleteFont">
+            <div class="notification deleteFont">
+                <div class="notificationIcon">
+                    <img src="img/ntf/icTextStyles.png"
+                         srcset="img/ntf/icTextStyles@2x.png 2x, img/ntf/icTextStyles@3x.png 3x"
+                         alt="&#x270f;">
+                    <img src="img/ntf/icDelete.svg" alt="–" class="notificationSubIcon">
+                </div>
+                <div class="notificationBody">
+                    <div class="notificationContent">
+                        <span class="notifier"></span> removed a text style: <span class="notificationFontName"></span>
+                    </div>
+                    <div class="notificationFooter">
+                        <div class="notificationProject">
+                            <span class="notificationProjectName"></span> • <span class="notificationProjectType"></span>
+                        </div>
+                        <time is="time-ago" format="micro" class="notificationLastUpdated"></time>
+                    </div>
+                </div>
+            </div>
+        </template>
+        <template class="notificationTemplate deleteFontMulti">
+            <div class="notification deleteFontMulti">
+                <div class="notificationIcon">
+                    <img src="img/ntf/icTextStyles.png"
+                         srcset="img/ntf/icTextStyles@2x.png 2x, img/ntf/icTextStyles@3x.png 3x"
+                         alt="&#x270f;">
+                    <img src="img/ntf/icDelete.svg" alt="+" class="notificationSubIcon">
+                </div>
+                <div class="notificationBody">
+                    <div class="notificationContent">
+                        <span class="notifier"></span> removed <span class="fontCount"></span>.
+                    </div>
+                    <div class="notificationFooter">
+                        <div class="notificationProject">
+                            <span class="notificationProjectName"></span> • <span class="notificationProjectType"></span>
+                        </div>
+                        <time is="time-ago" format="micro" class="notificationLastUpdated"></time>
+                    </div>
+                </div>
+            </div>
+        </template>
+        <template class="notificationTemplate updateFont">
+            <a class="notification updateFont">
+                <div class="notificationIcon">
+                    <img src="img/ntf/icTextStyles.png"
+                         srcset="img/ntf/icTextStyles@2x.png 2x, img/ntf/icTextStyles@3x.png 3x"
+                         alt="&#x270f;">
+                    <img src="img/ntf/icAdd.svg" alt="+" class="notificationSubIcon">
+                </div>
+                <div class="notificationBody">
+                    <div class="notificationContent">
+                        <span class="notifier"></span> updated a text style: <span class="notificationFontName"></span>
+                    </div>
+                    <div class="notificationFooter">
+                        <div class="notificationProject">
+                            <span class="notificationProjectName"></span> • <span class="notificationProjectType"></span>
+                        </div>
+                        <time is="time-ago" format="micro" class="notificationLastUpdated"></time>
+                    </div>
+                </div>
+            </a>
+        </template>
+        <template class="notificationTemplate updateFontMulti">
+            <a class="notification updateFontMulti">
+                <div class="notificationIcon">
+                    <img src="img/ntf/icTextStyles.png"
+                         srcset="img/ntf/icTextStyles@2x.png 2x, img/ntf/icTextStyles@3x.png 3x"
+                         alt="&#x270f;">
+                    <img src="img/ntf/icAdd.svg" alt="+" class="notificationSubIcon">
+                </div>
+                <div class="notificationBody">
+                    <div class="notificationContent">
+                        <span class="notifier"></span> updated <span class="fontCount"></span>.
+                    </div>
+                    <div class="notificationFooter">
+                        <div class="notificationProject">
+                            <span class="notificationProjectName"></span> • <span class="notificationProjectType"></span>
+                        </div>
+                        <time is="time-ago" format="micro" class="notificationLastUpdated"></time>
+                    </div>
+                </div>
+            </a>
+        </template>
+        <template class="notificationTemplate announcement">
+            <a target="_blank" class="notification announcement">
+                <div class="notificationIcon">
+                    <img src="img/ntf/icUpdate.png"
+                         srcset="img/ntf/icUpdate@2x.png 2x, img/ntf/icUpdate@3x.png 3x"
+                         alt="&#x1f4e2;"
+                         class="updateIcon">
+                </div>
+                <div class="notificationBody">
+                    <div class="notificationContent"></div>
+                    <div class="notificationFooter">
+                        <div class="notificationAnnouncer"></div>
+                        <time is="time-ago" format="micro" class="notificationLastUpdated"></time>
+                    </div>
+                </div>
+            </a>
+        </template>
+        <template id="exportProgressTemplate">
+            <div class="exportProgress">
+                <div class="exportProgressInformation">
+                    <div class="exportProgressLine"> &quot;<span class="screenName">My Screen</span>&quot;</div>
+                    <div class="exportProgressBarBox">
+                        <div class="exportProgressBar">
+                        </div>
+                    </div>
+                    <div class="exportProgressDetail">
+                        <div class="uploadingImages">Uploading Images…(<span class="uploadedImages"></span> of <span class="allImages"></span>)</div>
+                        <div class="ticklingTheBackend">Tickling the backend</div>
+                        <div class="imported">
+                            <div class="imported1">
+                                <div>Done!</div>
+                                <img src="img/icDone.png"
+                                     srcset="img/icDone@2x.png 2x, img/icDone@3x.png 3x">
+                            </div>
+                            <div class="imported2">This looks great!</div>
+                            <div class="imported3">
+                                <span class="wow">wow.</span>
+                                <span class="suchDesigns">such designs.</span>
+                                <span class="amaze">amaze.</span>
+                                <span class="soColors">so colors.</span>
+                            </div>
+                            <div class="imported4">
+                                <div>Done!</div>
+                            </div>
+                        </div>
+                        <div class="failed">Zeplin couldn't upload this one to the cloud.</div>
+                    </div>
+                </div>
+                <button class="exportProgressCommand cancelExport">
+                    <img src="img/icExportCancel.svg">
+                </button>
+                <button class="exportProgressCommand retryExport">
+                    <img src="img/icExportRetry.svg">
+                </button>
+                <button class="exportProgressCommand tick">
+                    <img src="img/icExportDone.svg">
+                </button>
+            </div>
+        </template>
+        <template id="exportProgressProjectGroupTemplate">
+            <div class="exportProgressProjectGroup">
+                <div class="exportProgressProjectLine">
+                    <div class="projectInformation">
+                    </div>
+                </div>
+                <div class="exportProgressesOfProject">
+                </div>
+            </div>
+        </template>
+        <template id="manageTagsButtonTemplate">
+            <div class="tagButton" id="manageTagsButton">
+                <img src="img/icSettings.svg" id="manageTagsIcon">
+                <div class="tagButtonText" id="manageTagsButtonText"></div>
+            </div>
+        </template>
+        <header data-selection="dashboard">
+            <div class="headerLeft">
+                <img src="img/icZeplin.svg" alt="Zeplin" id="zeplin">
+                <h3>
+                    <a href="projects.html" id="upLink">
+                        <img src="img/icNavUp.svg" alt="&lt;">
+                        <span>Projects</span>
+                    </a>
+                </h3>
+            </div>
+            <div class="headerCenter">
+                <div class="headerTabs">
+                    <div id="projectTabs">
+                        <input type="radio" name="projectTab" class="projectTab" value="dashboard" id="dashboardTab" checked>
+                        <label for="dashboardTab" class="dashboard">
+                            <paper-ripple class="lightOrange"></paper-ripple>
+                            DASHBOARD
+                        </label>
+                        <input type="radio" name="projectTab" class="projectTab" value="styleguide" id="styleguideTab">
+                        <label for="styleguideTab" class="styleguide">
+                            <paper-ripple class="lightOrange"></paper-ripple>
+                            STYLEGUIDE
+                        </label>
+                        <div id="projectTabSlider"></div>
+                    </div>
+                </div>
+                <div class="headerTitle">
+                    <button type="button" id="arrowLeft" title="&#x2190; Previous screen">
+                        <img src="img/icArrowLeft.svg" alt="&lt;">
+                    </button>
+                    <div class="headerContainer">
+                        <h2 id="header"></h2>
+                        <div id="headerExtra">Loading layers…</div>
+                    </div>
+                    <button type="button" id="arrowRight" title="Next screen &#x2192;">
+                        <img src="img/icArrowRight.svg" alt="&gt;">
+                    </button>
+                </div>
+            </div>
+            <div class="headerRight">
+                <button id="exportProgressesButton" class="hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" version="1.1">
+                        <circle cx="16" cy="16" id="exportsProgressBarBackground"></circle>
+                        <circle cx="16" cy="16" id="exportsProgressBar"></circle>
+                    </svg>
+                    <div id="exportsFailedDot"></div>
+                    <img id="exportsDoneTick" src="img/icExportsDone.svg">
+                </button>
+                <div id="exportProgressesContainer" class="hidden">
+                    <div id="exportProgressesBox">
+                        <div id="exportProgressesTitle">
+                            <div>Photoshop</div>
+                            <img src="img/icHand.png"
+                                 srcset="img/icHand@2x.png 2x, img/icHand@3x.png 3x">
+                            <div id="exportDestination">Zeplin</div>
+                        </div>
+                        <div id="exportProgresses">
+                        </div>
+                    </div>
+                    <button id="clearExportProgresses">
+                        <div class="clearExportRect"></div>
+                        <div class="clearExportRect"></div>
+                        <div class="clearExportRect"></div>
+                    </button>
+                </div>
+                <button id="notificationsButton">
+                    <div class="unreadBadge"></div>
+                    <img src="img/ntf/icNotificationStar.svg" alt="&#x2b50;" class="promotionBadge">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" class="notificationsIcon">
+                        <path fill-rule="evenodd" d="M23.998 27.75l-6.574 2.392c-.36.13-.553.535-.42.898l7.893-2.873c-.133-.366-.535-.55-.9-.418zm4.38-9.044L23.28 8.58c-2.084-4.147-7.307-6.217-11.667-4.63-4.36 1.587-7.03 6.532-5.963 11.046L8.257 26.03l-.465.168c-1.45.528-2.202 2.136-1.673 3.59.523 1.45 2.13 2.202 3.584 1.673l21.05-7.66c1.448-.524 2.2-2.132 1.672-3.59-.53-1.45-2.137-2.2-3.59-1.67l-.464.17zm-5.99 14.844c-2.18.794-4.59-.33-5.384-2.51l7.893-2.873c.793 2.18-.33 4.59-2.51 5.383z"/>
+                    </svg>
+                </button>
+                <div id="notificationContainer" class="hidden">
+                    <div id="notificationList"></div>
+                    <div class="noNotifications">
+                        No notifications currently.<br>
+                        Kinda great? &#x1f60f;
+                    </div>
+                    <div id="notificationError">
+                        Something went wrong while fetching<br>
+                        notifications. <span class="tryAgain">Try Again</span>
+                    </div>
+                    <div class="notificationEnd">
+                        ~ The End ~
+                    </div>
+                </div>
+                <a id="currentUser">
+                    <div class="gravatarFrame profileImageFrame">
+                        <img width="36" height="36" crossorigin="anonymous" class="profileImage">
+                    </div>
+                </a>
+                <div id="userMenu" class="hidden">
+                    <a href="profile.html" id="userInfo">
+                        <div class="gravatarFrame profileImageFrame">
+                            <img width="64" height="64" crossorigin="anonymous" class="profileImage">
+                        </div>
+                        <div>
+                            <div class="username"></div>
+                            <div class="email"></div>
+                            <div class="userStatus"></div>
+                        </div>
+                    </a>
+                    <ul>
+                        <li class="menuItem">
+                            <a href="#updatePlan" id="updatePlanButton">
+                                <img src="img/icPlan.svg" class="menuIcon">
+                                <span id="planName" class="menuLabel">Free</span>
+                                <button type="button">Update Plan</button>
+                            </a>
+                        </li>
+                        <li class="menuSeparator"></li>
+                        <li class="menuItem">
+                            <label>
+                                <img src="img/icNotification.svg" class="menuIcon">
+                                <span class="menuLabel">Desktop Notifications</span>
+                                <input type="checkbox" id="notificationStatusCheckbox" class="preferenceCheckbox">
+                                <div class="switch">
+                                    <div class="switchKnob"></div>
+                                </div>
+                            </label>
+                        </li>
+                        <li class="menuItem">
+                            <label>
+                                <div class="menuIcon"></div>
+                                <span class="menuLabel">Email Notifications</span>
+                                <input type="checkbox" id="emailNotificationStatusCheckbox" class="preferenceCheckbox">
+                                <div class="switch">
+                                    <div class="switchKnob"></div>
+                                </div>
+                            </label>
+                        </li>
+                        <li class="menuSeparator"></li>
+                        <li class="menuItem">
+                            <a id="logoutButton">
+                                <div class="menuIcon"></div>
+                                <span class="menuLabel">Log out</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="statusIndicator"></div>
+        </header>
+        <main>
+            <div class="overviewContent">
+                <section class="tabContent dashboardContent">
+                    <template id="screenTemplate">
+                        <div class="screen">
+                            <a class="screenLink">
+                                <img width="220" height="180" class="screenImage">
+                            </a>
+                            <div class="screenInfo">
+                                <form class="screenNameForm">
+                                    <input type="text" class="screenName" minlength="1" maxlength="100" required>
+                                </form>
+                                <time is="time-ago" format="micro" class="screenLastUpdated"></time>
+                            </div>
+                        </div>
+                    </template>
+                    <form class="sacrificeForSafariGods"></form>
+                    <template id="screenMenuTemplate">
+                        <div class="menu screenMenu">
+                            <button type="button" class="menuitem" data-action="manageTags">
+                                <span class="add">Add tag…</span>
+                                <span class="manage">Manage tags…</span>
+                                <paper-ripple></paper-ripple>
+                            </button>
+                            <button type="button" class="menuitem" data-action="thumbnail">
+                                Set as thumbnail
+                                <paper-ripple></paper-ripple>
+                            </button>
+                            <button type="button" class="menuitem" data-action="download">
+                                Download screen
+                                <paper-ripple></paper-ripple>
+                            </button>
+                            <button type="button" class="menuitem warning" data-action="delete">
+                                Delete screen
+                                <paper-ripple></paper-ripple>
+                            </button>
+                        </div>
+                    </template>
+                    <template id="tagMenuTemplate">
+                        <div class="menu tagMenu">
+                            <button type="button" class="menuitem warning" data-action="delete">
+                                Delete tag
+                                <paper-ripple></paper-ripple>
+                            </button>
+                        </div>
+                    </template>
+                    <div class="projectOverview">
+                        <div class="noScreens">
+                            <div class="noScreensWebApp">
+                                <h1>Here, you’ll see a list of screens after the designs are uploaded from Sketch or Photoshop.</h1>
+                                <div class="screenSilhouettes">
+                                    <div class="screenSilhouette"></div>
+                                    <div class="screenSilhouette"></div>
+                                    <div class="screenSilhouette"></div>
+                                    <div class="screenSilhouette"></div>
+                                    <div class="screenSilhouette"></div>
+                                    <div class="screenSilhouette"></div>
+                                </div>
+                                <p>
+                                    Screens can only be uploaded using the <span class="mac">Mac</span><span class="windows">Windows</span> app<span class="fullstop">.</span><span class="downloadApp">, if you are a designer you can <a href="https://zpl.io/download-mac" class="macDownloadLink">download it from here</a><a href="https://zpl.io/download-windows-64" class="windowsDownloadLink">download it from here</a>!</span><br>
+                                    To learn more about how to export from ​<a href="https://www.youtube.com/watch?v=tbKZAGthUgQ" target="_blank">Sketch​</a> or ​<a href="https://www.youtube.com/watch?v=0cVbzq-Q43M" target="_blank">Photoshop​</a>, follow the links to see a short demo.
+                                </p>
+                            </div>
+                            <div class="noScreensElectron">
+                                <h1>Designers!</h1>
+                                <h2>Let’s start by exporting screens from Photoshop:</h2>
+                                <div id="psToZeplin">
+                                    <img id="psLogo" src="img/icLogoPS.png" srcset="img/icLogoPS@2x.png 2x, img/icLogoPS@3x.png 3x">
+                                    <img id="psLogoToZeplinLogo" src="img/icDashboardPSToZeplin.svg">
+                                    <img id="zeplinLogo" src="img/icZeplin.svg">
+                                </div>
+                                <ol>
+                                    <li>
+                                        <div>
+                                            <div>Open your Photoshop file</div>
+                                            <img src="img/icPSLogoGrayscale.png" srcset="img/icPSLogoGrayscale@2x.png 2x, img/icPSLogoGrayscale@3x.png 3x">
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>Select artboards (or layers in artboards) and click:</div>
+                                        <img id="ssDashboardEmpty" src="img/ss/ssDashboardEmpty.png" srcset="img/ss/ssDashboardEmpty@2x.png 2x, img/ss/ssDashboardEmpty@3x.png 3x">
+                                        <div id="installPanelInfo">If you can’t see the panel under <code>“Window &gt; Extensions &gt; Zeplin”</code>, check how it’s installed from <a target="_blank" href="https://zeplin.io/support.html#photoshop-plugin">here</a>.</div>
+                                    </li>
+                                </ol>
+                                <h1>Developers!</h1>
+                                <h2 id="inviteYourDesigner">Invite your designer to upload screens:</h2>
+                                <h3 id="inviteYourDesignerInfo">You can invite your designer from the 'Members' section.</h3>
+                            </div>
+                        </div>
+                        <div class="projectSummary">
+                            <div id="screenCount"></div>
+                            <time is="relative-time" id="lastEdited"></time>
+                            <div class="multipleTagSelectionHint">Hold ⌘ to select multiple tags at once</div>
+                        </div>
+                        <div id="tags"></div>
+                        <div id="taglessProjectInfoLine">
+                            <div>Tags:</div><div>Organize your screens using tags. Right click a screen to add one!</div>
+                        </div>
+                        <div id="screenGrid"></div>
+                        <div id="moveCubuk" class="hidden"></div>
+                        <button id="jumpToScreen" class="grayButton">
+                            <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2.01 11.715c-2.68-2.68-2.68-7.025 0-9.705 2.68-2.68 7.025-2.68 9.705 0 2.35 2.35 2.64 5.978.87 8.643.034.028.068.06.1.09l2.912 2.913c.536.536.54 1.4 0 1.94-.536.537-1.402.54-1.94 0l-2.913-2.91c-.032-.033-.063-.067-.09-.102-2.666 1.77-6.295 1.48-8.644-.87zm1.94-1.94c1.61 1.607 4.216 1.607 5.824 0 1.608-1.61 1.608-4.216 0-5.824-1.608-1.607-4.215-1.607-5.823 0-1.607 1.61-1.607 4.216 0 5.824z" fill="#574751" fill-rule="evenodd"/>
+                            </svg>
+                        </button>
+                        <div class="noIntersection hidden">
+                            <h1>There are no screens with the selected tags.</h1>
+                            <button type="button" id="resetTags">Reset tags</button>
+                        </div>
+                    </div>
+                    <div id="projectInfo">
+                        <div id="projectInfoResizer" class="resizer">
+                            <div class="resizerIcon">
+                                <div class="resizerCircle"></div>
+                                <div class="resizerCircle"></div>
+                                <div class="resizerCircle"></div>
+                            </div>
+                        </div>
+                        <div class="sidebarHeader">
+                            <form id="projectNameForm">
+                                <input type="text" id="projectName" minlength="1" maxlength="100" required>
+                            </form>
+                        </div>
+                        <table>
+                            <tr>
+                                <td>Type:</td>
+                                <td id="projectType"></td>
+                            </tr>
+                            <tr>
+                                <td>Density:</td>
+                                <td>
+                                    <div class="densityContainer">
+                                        <span id="projectDensity"></span>
+                                        <button type="button" id="changeDensityButton">
+                                            <img src="img/icEdit.svg" alt="Edit">
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                        <div id="projectLinkRow">
+                            <div class="rowTitle">Project Link: </div>
+                            <div id="projectLinkCell">
+                                <span id="projectLinkMirror"></span>
+                                <span id="projectLink" class="fetching" tabindex="1">Fetching…</span>
+                            </div>
+                            <button type="button" id="copyProjectLinkButton">
+                                <img src="img/icCopy.svg">
+                            </button>
+                        </div>
+                        <div id="slackIntegrationRow">
+                            <div class="rowTitle">Integrations:</div>
+                            <a id="slackButton">
+                                <img src="img/integrations/icBttnSlack.png"
+                                     srcset="img/integrations/icBttnSlack@2x.png 2x, img/integrations/icBttnSlack@3x.png 3x"
+                                     alt="Slack">
+                                <span>Add to <span class="medium">Slack</span></span>
+                            </a>
+                        </div>
+                        <div id="integrations">
+                            <div class="integration" id="slackIntegration">
+                                <img src="img/integrations/icBttnSlack.png"
+                                     srcset="img/integrations/icBttnSlack@2x.png 2x, img/integrations/icBttnSlack@3x.png 3x"
+                                     alt="Slack">
+
+                                <h2>Connected to <a id="slackChannel" target="_blank" rel="nofollow external"></a></h2>
+                                <button id="slackSettings" class="settings">
+                                    <img src="img/icCog.svg">
+                                </button>
+                                <div id="slackSettingsMenu" class="menu hidden">
+                                    <a class="menuitem addSlack">
+                                        Add another…
+                                        <paper-ripple></paper-ripple>
+                                    </a>
+                                    <a class="menuitem slackSettings" target="_blank">
+                                        Settings
+                                        <paper-ripple></paper-ripple>
+                                    </a>
+                                </div>
+                            </div>
+                            <template id="prevSlackIntegration">
+                                <div class="prevIntegration">
+                                    <h2>Connected to <a class="slackChannel" target="_blank"
+                                                        rel="nofollow external"></a></h2>
+                                </div>
+                            </template>
+                        </div>
+                        <div class="sidebarHeader">
+                            <h1>Members</h1>
+                            <button type="button" id="addUserButton">
+                                <paper-ripple></paper-ripple>
+                                Invite
+                            </button>
+                            <div id="inviteUserPopup" class="hidden">
+                                <form method="post" id="inviteUserForm">
+                                    <div class="inviteeArea">
+                                        <input type="text" name="handle" placeholder="Invite with username/email"
+                                               maxlength="1024" required autocapitalize="none" autocomplete="off"
+                                               id="inviteeHandle">
+                                        <button id="inviteButton">
+                                            <paper-ripple></paper-ripple>
+                                            Invite
+                                        </button>
+                                    </div>
+                                </form>
+                                <div class="info">
+                                    <img src="img/icInfo.svg" alt="i">
+                                    <span>We’ll notify them via email!</span>
+                                </div>
+                            </div>
+                        </div>
+                        <template id="memberTemplate">
+                            <div class="member">
+                                <div class="gravatarFrame memberImageFrame">
+                                    <img width="60" height="60" crossorigin="anonymous" class="memberImage loading">
+                                </div>
+                                <div class="memberInfo">
+                                    <div class="memberName"></div>
+                                    <div class="memberRole"></div>
+                                </div>
+                                <img src="img/icMemberMenu.svg" class="wheel">
+                            </div>
+                        </template>
+                        <template id="memberMenuTemplate">
+                            <div id="memberMenu" class="menu">
+                                <button type="button" class="menuitem" data-action="assign">
+                                    Assign admin
+                                    <paper-ripple></paper-ripple>
+                                </button>
+                                <button type="button" class="menuitem" data-action="unassign">
+                                    Unassign admin
+                                    <paper-ripple></paper-ripple>
+                                </button>
+                                <button type="button" class="menuitem" data-action="transfer">
+                                    Transfer ownership
+                                    <paper-ripple></paper-ripple>
+                                </button>
+                                <button type="button" class="menuitem warning" data-action="remove">
+                                    <span class="remove">Remove from project</span>
+                                    <span class="leave">Leave project</span>
+                                    <paper-ripple></paper-ripple>
+                                </button>
+                            </div>
+                        </template>
+                        <template id="dotMenuTemplate">
+                            <div class="menu dotMenu">
+                                <button type="button" class="menuitem warning" data-action="delete">
+                                    Delete Note
+                                    <paper-ripple></paper-ripple>
+                                </button>
+                            </div>
+                        </template>
+                        <div id="noOtherMembers">
+                            <div class="cmonText">
+                                &#x1f612; C’mon it’s a collaboration app, invite your team members!
+                            </div>
+                            <img src="img/icArrowMember.svg" class="memberArrow">
+                        </div>
+                        <div id="members"></div>
+                    </div>
+                </section>
+                <section class="tabContent styleguideContent">
+                    <div class="styleContainer">
+                        <div class="header">
+                            <div class="dropIcon"></div>
+                            <h1>Color Palette</h1>
+                        </div>
+                        <template id="guidelineColorTemplate">
+                            <div class="color">
+                                <div class="colorPreview"></div>
+                                <div class="colorInfo">
+                                    <div class="colorNameContainer">
+                                        <input type="text" class="colorName" maxlength="36" pattern="[a-zA-Z0-9_-]"/>
+                                    </div>
+                                    <div class="colorHexValueContainer">
+                                        <div class="colorHexContainer">
+                                            <input type="text" class="colorHex" maxlength="6" pattern="[A-Fa-f0-9]"/>
+                                        </div>
+                                        <div class="colorAlphaContainer">
+                                            <input type="text" class="colorAlpha" pattern="[0-9]" maxlength="3"/>
+                                        </div>
+                                    </div>
+                                    <div class="colorRGB"></div>
+                                </div>
+                            </div>
+                        </template>
+                        <template id="colorMenuTemplate">
+                            <div class="menu colorMenu">
+                                <button type="button" class="menuitem warning" data-action="delete">
+                                    Delete &quot;<span class="actionSubject"></span>&quot;
+                                    <paper-ripple></paper-ripple>
+                                </button>
+                            </div>
+                        </template>
+                        <div id="colorPalette"></div>
+                        <div id="namingTip">
+                            <img src="img/icNamingTip.svg">
+
+                            <h1 class="title">Naming Tip: </h1><span class="projectNaming"></span>
+                        </div>
+                        <div id="noColorPalette">
+                            <div class="sampleColors">
+                                <div class="color">
+                                    <div class="colorPreview fecf33"></div>
+                                    <div class="colorInfo">
+                                        <div class="colorName">yellow</div>
+                                        <div class="colorHexValueContainer">
+                                            <div class="colorHex">fecf33</div>
+                                            <div class="colorAlpha">100</div>
+                                        </div>
+                                        <div class="colorRGB">rgb 254 207 51</div>
+                                    </div>
+                                </div>
+                                <div class="color">
+                                    <div class="colorPreview fdbd39"></div>
+                                    <div class="colorInfo">
+                                        <div class="colorName">lightOrange</div>
+                                        <div class="colorHexValueContainer">
+                                            <div class="colorHex">fdbd39</div>
+                                            <div class="colorAlpha">100</div>
+                                        </div>
+                                        <div class="colorRGB">rgb 253 189 57</div>
+                                    </div>
+                                </div>
+                                <div class="color">
+                                    <div class="colorPreview ee6723"></div>
+                                    <div class="colorInfo">
+                                        <div class="colorName">peach</div>
+                                        <div class="colorHexValueContainer">
+                                            <div class="colorHex">ee6723</div>
+                                            <div class="colorAlpha">100</div>
+                                        </div>
+                                        <div class="colorRGB">rgb 238 103 35</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="guidelineEmptyStateBackdrop">
+                                <div class="guidelineEmptyStateContainer">
+                                    <img class="screenshot" src="img/ss/ssColorPaletteEmpty.png"
+                                         srcset="img/ss/ssColorPaletteEmpty@2x.png 2x,
+                                                img/ss/ssColorPaletteEmpty@3x.png 3x">
+                                    <div class="guidelineEmptyArrow">
+                                        <img src="img/icStyleguideArrow.png"
+                                             srcset="img/icStyleguideArrow@2x.png 2x,
+                                                 img/icStyleguideArrow@3x.png 3x">
+                                    </div>
+                                    <div class="guidelineEmptyInfoContainer">
+                                        <img class="guidelineEmptyAddIcon"
+                                             src="img/icAddColor.svg">
+                                        <div class="guidelineEmptyInfo">Click this icon next to colors to add them to the Color Palette</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header">
+                            <div class="fontIcon"></div>
+                            <h1>Font Book</h1>
+                        </div>
+                        <div id="fontBook"></div>
+                        <div id="noFontBook">
+                            <div class="sampleFont">
+                                <div class="font">
+                                    <div class="styleName">Text Style</div>
+                                    <div class="styleInfo">
+                                        <div class="mainInfo">
+                                            <div class="style">Roboto-Regular</div>
+                                            <div class="iosxStyle">SFUIDisplay-Regular</div>
+                                            <div class="colorContainer">
+                                                <span class="colorPreview"></span><span class="color">#574751</span><span class="iosxColor">rgb(87, 71, 81)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="guidelineEmptyStateBackdrop">
+                                <div class="guidelineEmptyStateContainer">
+                                    <img class="screenshot" src="img/ss/ssFontbookEmpty.png"
+                                         srcset="img/ss/ssFontbookEmpty@2x.png 2x,
+                                                img/ss/ssFontbookEmpty@3x.png 3x">
+
+                                    <div class="guidelineEmptyArrow">
+                                        <img src="img/icStyleguideArrow.png"
+                                             srcset="img/icStyleguideArrow@2x.png 2x,
+                                                 img/icStyleguideArrow@3x.png 3x">
+                                    </div>
+                                    <div class="guidelineEmptyInfoContainer">
+                                        <img class="guidelineEmptyAddIcon"
+                                             src="img/icAddTextStyle.svg">
+
+                                        <div class="guidelineEmptyInfo">Click this icon next to texts to add them to
+                                            the Font Book
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <template id="textStyleTemplate">
+                            <div class="font">
+                                <form class="styleNameForm">
+                                    <input type="text" class="styleName" minlength="1" maxlength="100" required>
+                                </form>
+                                <div class="styleInfo">
+                                    <div class="mainInfo">
+                                        <div class="style"></div>
+                                        <div class="colorContainer">
+                                            <span class="colorPreview"></span><span class="color"></span>
+                                            <button class="deleteTSColor"></button>
+                                        </div>
+                                    </div>
+                                    <div class="subInfo"></div>
+                                </div>
+                                <div class="deleteTextStyle">
+                                    <img src="img/icGuidelineRemove.svg">
+                                    <span>Delete</span>
+                                </div>
+                            </div>
+                        </template>
+                        <form class="sacrificeForSafariGods"></form>
+                        <template id="textStyleMenuTemplate">
+                            <div class="menu textStyleMenu">
+                                <button class="menuitem" data-action="rename">
+                                    Rename &quot;<span class="actionSubject"></span>&quot;
+                                    <paper-ripple></paper-ripple>
+                                </button>
+                                <button class="menuitem warning" data-action="delete">
+                                    Delete &quot;<span class="actionSubject"></span>&quot;
+                                    <paper-ripple></paper-ripple>
+                                </button>
+                            </div>
+                        </template>
+                    </div>
+                    <div id="generatorContainer">
+                        <div id="generatorResizer" class="resizer">
+                            <div class="resizerIcon">
+                                <div class="resizerCircle"></div>
+                                <div class="resizerCircle"></div>
+                                <div class="resizerCircle"></div>
+                            </div>
+                        </div>
+                        <div class="emptyLineNumber"></div>
+                        <div class="generatorHeader">
+                            <h2>
+                                <button id="guidelineStyleOptionsButton">
+                                    <div class="styleOptionsButtonContent">
+                                        <span id="guidelineSelectedStyleExportType"></span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">
+                                            <path fill-rule="evenodd"
+                                                  d="M9.333 15.89C8.9 15.96 8.453 16 8 16c-.454 0-.9-.038-1.333-.11v-2.04c-.68-.153-1.318-.423-1.89-.788l-1.44 1.44c-.708-.51-1.33-1.13-1.84-1.84l1.44-1.44c-.364-.57-.634-1.208-.788-1.89H.11C.04 8.9 0 8.455 0 8c0-.454.038-.9.11-1.333h2.04c.153-.68.423-1.318.788-1.89l-1.44-1.44c.51-.708 1.13-1.33 1.84-1.84l1.44 1.44c.57-.364 1.208-.634 1.89-.788V.11C7.1.04 7.545 0 8 0c.454 0 .9.038 1.333.11v2.04c.68.153 1.318.423 1.89.788l1.44-1.44c.707.51 1.33 1.13 1.838 1.84L13.06 4.77c.366.574.638 1.213.793 1.897h2.037c.072.433.11.88.11 1.333 0 .454-.038.9-.11 1.333h-2.04c-.154.684-.426 1.323-.792 1.896l1.442 1.43c-.507.71-1.13 1.33-1.837 1.84l-1.44-1.44c-.57.364-1.208.634-1.89.788v2.04zM8 11.6c1.988 0 3.6-1.612 3.6-3.6S9.988 4.4 8 4.4 4.4 6.012 4.4 8s1.612 3.6 3.6 3.6z"/>
+                                        </svg>
+                                    </div>
+                                </button>
+                            </h2>
+                            <div id="guidelineStyleOptions">
+                                <div id="guidelineStyleExportTypes">
+                                    <div class="webStyleOptions">
+                                        <label>
+                                            <span>CSS</span>
+                                            <paper-ripple></paper-ripple>
+                                            <input type="radio" name="guidelineStyleExportType" value="css" checked>
+                                            <img src="img/icMenuCheck.svg" alt="&check;">
+                                        </label>
+                                        <label>
+                                            <span>Sass</span>
+                                            <paper-ripple></paper-ripple>
+                                            <input type="radio" name="guidelineStyleExportType" value="sass">
+                                            <img src="img/icMenuCheck.svg" alt="&check;">
+                                        </label>
+                                        <label>
+                                            <span>SCSS</span>
+                                            <paper-ripple></paper-ripple>
+                                            <input type="radio" name="guidelineStyleExportType" value="scss">
+                                            <img src="img/icMenuCheck.svg" alt="&check;">
+                                        </label>
+                                        <label>
+                                            <span>Less</span>
+                                            <paper-ripple></paper-ripple>
+                                            <input type="radio" name="guidelineStyleExportType" value="less">
+                                            <img src="img/icMenuCheck.svg" alt="&check;">
+                                        </label>
+                                        <label>
+                                            <span>Stylus</span>
+                                            <paper-ripple></paper-ripple>
+                                            <input type="radio" name="guidelineStyleExportType" value="stylus">
+                                            <img src="img/icMenuCheck.svg" alt="&check;">
+                                        </label>
+                                        <hr>
+                                        <label>
+                                            <paper-ripple></paper-ripple>
+                                            Dimensions
+                                            <input type="checkbox" id="guidelineShowDimensionsCheckbox" checked>
+                                            <img src="img/icMenuCheck.svg" alt="&check;">
+                                        </label>
+                                        <label>
+                                            <paper-ripple></paper-ripple>
+                                            Unitless line-height
+                                            <input type="checkbox" id="guidelineUnitlessLineHeightCheckbox" checked>
+                                            <img src="img/icMenuCheck.svg" alt="&check;">
+                                        </label>
+                                    </div>
+                                    <div class="iosStyleOptions">
+                                        <label>
+                                            <span>Swift</span>
+                                            <paper-ripple></paper-ripple>
+                                            <input type="radio" name="styleExportType" value="swift" checked>
+                                            <img src="img/icMenuCheck.svg" alt="&check;">
+                                        </label>
+                                        <label>
+                                            <span>Objective-C</span>
+                                            <paper-ripple></paper-ripple>
+                                            <input type="radio" name="styleExportType" value="objc">
+                                            <img src="img/icMenuCheck.svg" alt="&check;">
+                                        </label>
+                                        <hr>
+                                        <div class="styleMenuTitle">Deployment Target</div>
+                                        <label>
+                                            <paper-ripple></paper-ripple>
+                                            9.0
+                                            <input type="radio" name="targetType" value="9.0" checked>
+                                            <img src="img/icMenuCheck.svg" alt="&check;">
+                                        </label>
+                                        <label>
+                                            <paper-ripple></paper-ripple>
+                                            8.2
+                                            <input type="radio" name="targetType" value="8.2">
+                                            <img src="img/icMenuCheck.svg" alt="&check;">
+                                        </label>
+                                        <label>
+                                            <paper-ripple></paper-ripple>
+                                            8.0
+                                            <input type="radio" name="targetType" value="8.0">
+                                            <img src="img/icMenuCheck.svg" alt="&check;">
+                                        </label>
+                                        <label>
+                                            <paper-ripple></paper-ripple>
+                                            7.0
+                                            <input type="radio" name="targetType" value="7.0">
+                                            <img src="img/icMenuCheck.svg" alt="&check;">
+                                        </label>
+                                    </div>
+                                    <div class="osxStyleOptions">
+                                        <label>
+                                            <span>Swift</span>
+                                            <paper-ripple></paper-ripple>
+                                            <input type="radio" name="styleExportType" value="swift" checked>
+                                            <img src="img/icMenuCheck.svg" alt="&check;">
+                                        </label>
+                                        <label>
+                                            <span>Objective-C</span>
+                                            <paper-ripple></paper-ripple>
+                                            <input type="radio" name="styleExportType" value="objc">
+                                            <img src="img/icMenuCheck.svg" alt="&check;">
+                                        </label>
+                                        <hr>
+                                        <div class="styleMenuTitle">Deployment Target</div>
+                                        <label>
+                                            <paper-ripple></paper-ripple>
+                                            10.11
+                                            <input type="radio" name="targetType" value="10.11" checked>
+                                            <img src="img/icMenuCheck.svg" alt="&check;">
+                                        </label>
+                                        <label>
+                                            <paper-ripple></paper-ripple>
+                                            10.10
+                                            <input type="radio" name="targetType" value="10.10">
+                                            <img src="img/icMenuCheck.svg" alt="&check;">
+                                        </label>
+                                        <label>
+                                            <paper-ripple></paper-ripple>
+                                            10.9
+                                            <input type="radio" name="targetType" value="10.9">
+                                            <img src="img/icMenuCheck.svg" alt="&check;">
+                                        </label>
+                                    </div>
+                                    <div class="androidStyleOptions">
+                                        <label>
+                                            <span>lineSpacingExtra</span>
+                                            <paper-ripple></paper-ripple>
+                                            <input type="radio" name="lineSpacingType" value="extra" checked>
+                                            <img src="img/icMenuCheck.svg" alt="&check;">
+                                        </label>
+                                        <label>
+                                            <span>lineSpacingMultiplier</span>
+                                            <paper-ripple></paper-ripple>
+                                            <input type="radio" name="lineSpacingType" value="multiplier">
+                                            <img src="img/icMenuCheck.svg" alt="&check;">
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="guidelineStyleExportContainer">
+                            <button id="exportColors" class="exportButton"></button>
+                            <button id="exportTextStyles" class="exportButton"></button>
+                            <div class="iosCategoryContainer categoryContainer">
+                                <div class="categoryPrefixContainer">
+                                    <label class="categoryTitle" for="iosCategoryPrefix">Prefix:</label>
+                                    <input type="text" id="iosCategoryPrefix" maxlength="10">
+                                </div>
+                                <div class="categoryNameContainer">
+                                    <label class="categoryTitle" for="iosCategoryName"></label>
+                                    <input type="text" id="iosCategoryName" maxlength="19">
+                                </div>
+                            </div>
+                            <div class="osxCategoryContainer categoryContainer">
+                                <div class="categoryPrefixContainer">
+                                    <label class="categoryTitle" for="osxCategoryPrefix">Prefix:</label>
+                                    <input type="text" id="osxCategoryPrefix" maxlength="10">
+                                </div>
+                                <div class="categoryNameContainer">
+                                    <label class="categoryTitle" for="osxCategoryName"></label>
+                                    <input type="text" id="osxCategoryName" maxlength="19">
+                                </div>
+                            </div>
+                            <div id="guidelineStyle" class="hidden">
+                                <textarea id="guidelineStyleMirror"></textarea>
+                            </div>
+                            <div class="colorStyle">
+                                <textarea id="colorStyleMirror"></textarea>
+                            </div>
+                            <div class="textStyle">
+                                <textarea id="textStyleMirror"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="screenContent"  >
+                <section id="screenView">
+                    <div id="dotgrid" class="noSelect">
+                        <div id="screenContainer">
+                            <template id="layerTemplate">
+                                <div class="layer">
+                                    <div class="cornerCircle topLeftCircle"></div>
+                                    <div class="edgeCircle horizontalEdgeCircle topCircle"></div>
+                                    <div class="cornerCircle topRightCircle"></div>
+                                    <div class="edgeCircle verticalEdgeCircle rightCircle"></div>
+                                    <div class="cornerCircle bottomRightCircle"></div>
+                                    <div class="edgeCircle horizontalEdgeCircle bottomCircle"></div>
+                                    <div class="cornerCircle bottomLeftCircle"></div>
+                                    <div class="edgeCircle verticalEdgeCircle leftCircle"></div>
+                                </div>
+                            </template>
+                            <img crossorigin="anonymous" id="screenImage" class="noSelect">
+                            <div id="layers"></div>
+                            <div id="dots"></div>
+                            <div id="rulers" class="hidden">
+                                <div id="topRuler" class="ruler horizontal noEvent"></div>
+                                <div id="rightRuler" class="ruler vertical noEvent"></div>
+                                <div id="bottomRuler" class="ruler horizontal noEvent"></div>
+                                <div id="leftRuler" class="ruler vertical noEvent"></div>
+                            </div>
+                            <div id="distances">
+                                <div id="topDistance" class="distance vertical noEvent hidden">
+                                    <div id="topDistanceValue" class="distanceValue"></div>
+                                </div>
+                                <div id="rightDistance" class="distance horizontal noEvent hidden">
+                                    <div id="rightDistanceValue" class="distanceValue"></div>
+                                </div>
+                                <div id="bottomDistance" class="distance vertical noEvent hidden">
+                                    <div id="bottomDistanceValue" class="distanceValue"></div>
+                                </div>
+                                <div id="leftDistance" class="distance horizontal noEvent hidden">
+                                    <div id="leftDistanceValue" class="distanceValue"></div>
+                                </div>
+                            </div>
+                            <div id="layoutGridContainer" class="hidden">
+                                <div id="layoutGridColumns"></div>
+                                <div id="layoutGridRows"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="zoomWidget">
+                        <button type="button" id="zoomOut" class="grayButton">
+                            <div class="minus"></div>
+                        </button>
+                        <select id="zoomDropdown">
+                            <option value="0.25">25%</option>
+                            <option value="0.5">50%</option>
+                            <option value="0.75">75%</option>
+                            <option value="1" selected>100%</option>
+                            <option value="1.5">150%</option>
+                            <option value="2">200%</option>
+                            <option value="2.5">250%</option>
+                            <option value="3">300%</option>
+                            <option value="4">400%</option>
+                            <option value="5">500%</option>
+                        </select>
+                        <label id="zoomDropdownLabel" for="zoomDropdown">100</label>
+                        <button type="button" id="zoomIn" class="grayButton">
+                            <div class="plus"></div>
+                        </button>
+                    </div>
+                    <div id="noteWidget">
+                        <button type="button" id="addNoteButton" class="grayButton">
+                            <div class="plus"></div>
+                        </button>
+                        <label id="toggleNotes" for="maymusCheckbox" class="grayButton">
+                            <span>Notes</span>
+                            <input type="checkbox" name="maymusCheckbox" id="maymusCheckbox" checked>
+                            <img src="img/icMaymusOpen.png"
+                                 srcset="img/icMaymusOpen@2x.png 2x, img/icMaymusOpen@3x.png 3x"
+                                 id="maymusOpen" class="maymus">
+                            <img src="img/icMaymusClosed.png"
+                                 srcset="img/icMaymusClosed@2x.png 2x, img/icMaymusClosed@3x.png 3x"
+                                 id="maymusClosed" class="maymus">
+                        </label>
+                    </div>
+                </section>
+                <aside id="rightSidebarWrapper">
+                    <div id="rightSidebarResizer" class="resizer">
+                        <div class="resizerIcon">
+                            <div class="resizerCircle"></div>
+                            <div class="resizerCircle"></div>
+                            <div class="resizerCircle"></div>
+                        </div>
+                    </div>
+                    <div id="rightSidebar" class="resourceView">
+                        <template id="colorTemplate">
+                            <div class="color">
+                                <div class="colorPreview">
+                                    <div class="topGradientLine"></div>
+                                    <div class="gradientStopCircle"></div>
+                                    <div class="bottomGradientLine"></div>
+                                </div>
+                                <div class="colorInfo">
+                                    <div class="colorName"></div>
+                                    <div class="colorValue"></div>
+                                </div>
+                                <div class="addColor"></div>
+                            </div>
+                        </template>
+                        <template id="assetTemplate">
+                            <div class="assetContainer">
+                                <div class="asset">
+                                    <div class="assetPreview">
+                                        <img crossorigin="anonymous">
+                                    </div>
+                                    <div class="assetInfo">
+                                        <div class="assetName"></div>
+                                        <div class="assetSize"></div>
+                                    </div>
+                                </div>
+                                <div class="assetExports"></div>
+                            </div>
+                        </template>
+                        <template id="assetExportTemplate">
+                            <div class="assetExporter">
+                                <div class="assetType"></div>
+                                <div class="assetCount"></div>
+                                <div class="exportAssets">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="32">
+                                        <path fill-rule="evenodd"
+                                              d="M0 12.67C0 11.75.718 11 1.593 11h20.814c.88 0 1.593.748 1.593 1.67v16.66c0 .922-.718 1.67-1.593 1.67H1.593C.713 31 0 30.252 0 29.33V12.67zm2 1.123c0-.438.347-.793.772-.793h18.456c.426 0 .772.364.772.793v14.414c0 .438-.347.793-.772.793H2.772C2.346 29 2 28.636 2 28.207V13.793zM6 11h12v2H6v-2zm7-6.413V20h-2V4.587L6.587 9 5.293 7.707 12 1l6.707 6.707L17.413 9 13 4.587z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </template>
+                        <div id="resourceView">
+                            <div id="resourceTabs" data-selection="color">
+                                <input type="radio" name="resourceTab" class="resourceTab" id="infoTab" value="info"
+                                       checked>
+                                <label for="infoTab">
+                                    <paper-ripple class="lightOrange"></paper-ripple>
+                                    Info
+                                </label>
+                                <input type="radio" name="resourceTab" class="resourceTab" id="colorTab"
+                                       value="color">
+                                <label for="colorTab">
+                                    <paper-ripple class="lightOrange"></paper-ripple>
+                                    Colors
+                                </label>
+                                <input type="radio" name="resourceTab" class="resourceTab" id="assetTab"
+                                       value="asset">
+                                <label for="assetTab">
+                                    <paper-ripple class="lightOrange"></paper-ripple>
+                                    Assets
+                                </label>
+
+                                <div id="resourceTabSlider"></div>
+                            </div>
+                            <div id="tabContents">
+                                <div class="tabContent" id="infoContent">
+                                    <div id="screenDescriptionContainer">
+                                        <h2>Description</h2>
+                                        <div id="descriptionRow">
+                                            <div id="descriptionWrapper">
+                                                <div id="descriptionMirror"></div>
+                                                <div id="descriptionContainer">
+                                                        <textarea id="screenDescription"
+                                                                  spellcheck="false"
+                                                                  placeholder="Enter a short description here"
+                                                                  maxlength="249"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="descriptionFooterContainer">
+                                                <div id="descriptionCounter"></div>
+                                                <button id="changeDescriptionButton" type="button"></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h2>Last updated</h2>
+                                    <time is="time-ago" id="screenLastUpdated"></time>
+                                    <h2>Tags</h2>
+
+                                    <div id="screenTags"></div>
+                                    <h2>Link</h2>
+                                    <div id="screenLinkRow">
+                                        <div class="screenLinkCell">
+                                            <span id="screenLinkMirror"></span>
+                                            <span id="screenLink" class="fetching" tabindex="1">Fetching…</span>
+                                        </div>
+                                        <button id="copyScreenLinkButton" type="button">
+                                            <img src="img/icCopy.svg">
+                                        </button>
+                                    </div>
+                                    <template id="shortLinkMenuTemplate">
+                                        <div class="menu shortLinkMenu">
+                                            <button type="button" class="menuitem" data-action="copyWebLink" title="Copy link to clipboard">
+                                                Copy Web Link
+                                                <span class="webLinkMirror shortLinkMirror"></span>
+                                                <paper-ripple></paper-ripple>
+                                            </button>
+                                            <button type="button" class="menuitem" data-action="copyMacURI" title="Copy link to clipboard">
+                                                Copy Mac URI
+                                                <span class="macURIMirror shortLinkMirror"></span>
+                                                <paper-ripple></paper-ripple>
+                                            </button>
+                                        </div>
+                                    </template>
+                                    <div id="layoutGridInfoContainer" class="hidden">
+                                        <div class="header">
+                                            <h2>Grid</h2>
+                                            <label>
+                                                <input type="checkbox" id="layoutGridCheckbox"
+                                                       class="preferenceCheckbox">
+
+                                                <div class="switch">
+                                                    <div class="switchKnob"></div>
+                                                </div>
+                                            </label>
+                                        </div>
+                                        <div>
+                                            <div id="gridViz">
+                                                <table>
+                                                    <tr>
+                                                        <td id="gridColumnWidth"></td>
+                                                        <td id="gridGutterWidth"></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td id="gridColumnViz"></td>
+                                                        <td id="verticalGutterViz"></td>
+                                                        <td id="gridRowHeight"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td id="horizontalGutterViz"></td>
+                                                        <td></td>
+                                                        <td id="gridGutterHeight"></td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                            <div id="gridTotalWidth" class="sidebarRow withLabel layerProperty"
+                                                 data-label="Total width:"></div>
+                                            <div id="gridNumberOfCols" class="sidebarRow withLabel layerProperty"
+                                                 data-label="Number of columns:"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tabContent loading" id="colorContent">
+                                    <div id="screenColorsLoading">
+                                        <img src="img/loadingColors.svg">
+
+                                        <div>Loading colors…</div>
+                                    </div>
+                                    <div id="noScreenColors">
+                                        Huh! Can't find any colors in this screen, you can ask your designer to
+                                        export screens from Sketch app, so Zeplin can pick all of them!
+                                    </div>
+                                    <div class="screenColorsContainer">
+                                        <h2>All colors used in this screen</h2>
+
+                                        <div id="screenColors"></div>
+                                    </div>
+                                </div>
+                                <div class="tabContent loading" id="assetContent">
+                                    <div id="screenAssetsLoading">
+                                        <img src="img/loadingAssets.svg">
+
+                                        <div>Loading assets…</div>
+                                    </div>
+                                    <div id="noScreenAssets">
+                                        <h1>To see your assets here:</h1>
+                                        <h2>1.</h2>
+                                        <p>Make your layers <em>‘exportable’</em> in Sketch.</p>
+                                        <img src="img/ssAssetEmpty1.png" srcset="img/ssAssetEmpty1@2x.png 2x">
+                                        <h2>2.</h2>
+                                        <p>Or, draw slices.</p>
+                                        <img src="img/ssAssetEmpty2.png" srcset="img/ssAssetEmpty2@2x.png 2x">
+                                        <h2>3.</h2>
+                                        <p>
+                                            Use different names for these layers.<br>
+                                            They'll be generated tailored to the platform needs when you export screens to Zeplin.
+                                        </p>
+                                    </div>
+                                    <div class="screenAssetsContainer">
+                                        <div class="downloadNotSupported">
+                                            Exporting assets is not working on your browser yet &#x1f614;, try it on
+                                            Firefox or Chrome.
+                                        </div>
+                                        <h2>Export all assets</h2>
+
+                                        <div id="screenAssetExports"></div>
+                                        <h2>Export an individual asset</h2>
+
+                                        <div id="screenAssets"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="layerView">
+                            <h1><span id="layerName"></span><span id="closeLayerView">×</span></h1>
+
+                            <div class="sidebarRow">
+                                <div id="layerPositionX" class="withLabel layerProperty" data-label="x:"></div>
+                                <div id="layerPositionY" class="withLabel layerProperty" data-label="y:"></div>
+                            </div>
+                            <div class="sidebarRow">
+                                <div id="layerWidth" class="withLabel layerProperty" data-label="Width:"></div>
+                                <div id="layerHeight" class="withLabel layerProperty" data-label="Height:"></div>
+                            </div>
+                            <div id="layerOpacity" class="sidebarRow withLabel layerProperty"
+                                 data-label="Opacity:"></div>
+                            <div id="layerRadius" class="sidebarRow withLabel layerProperty"
+                                 data-label="Radius:"></div>
+                            <div id="layerRotation" class="sidebarRow withLabel layerProperty"
+                                 data-label="Rotation:"></div>
+                            <div id="layerBlendMode" class="sidebarRow withLabel layerProperty"
+                                 data-label="Blend Mode:"></div>
+                            <div id="textLayerInfo">
+                                <div id="textStyleWrapper">
+                                    <h2>Typeface</h2>
+                                    <div class="sidebarRow layerProperty" id="layerTextStyle">
+                                        <div class="textStyleName"></div>
+                                        <div class="removeTextStyle">
+                                            <svg width="36" height="16" viewBox="0 0 36 16"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <g fill="#FFF" fill-rule="evenodd">
+                                                    <path d="M32 8V4.995c0-.54-.448-.995-1-.995-.556 0-1 .446-1 .995V8h-3.005c-.54 0-.995.448-.995 1 0 .556.446 1 .995 1H30v3.005c0 .54.448.995 1 .995.556 0 1-.446 1-.995V10h3.005c.54 0 .995-.448.995-1 0-.556-.446-1-.995-1H32zM3.954 9.09l2.31-6.43h.04l2.273 6.43H3.954zM5.31 1L0 14.788h1.853l1.528-4.152h5.77l1.49 4.152h2.005L7.315 1H5.31zm17.153 13.75c-.28.166-.668.25-1.165.25-.42 0-.754-.12-1.003-.357-.248-.238-.372-.628-.372-1.17-.446.542-.965.932-1.557 1.17-.592.238-1.232.357-1.92.357-.445 0-.87-.05-1.27-.154-.4-.103-.748-.264-1.04-.483-.294-.22-.526-.506-.698-.86-.172-.354-.258-.782-.258-1.284 0-.567.096-1.03.287-1.39.19-.36.442-.654.754-.88.313-.225.67-.396 1.07-.51.402-.117.813-.214 1.233-.29.446-.09.87-.16 1.27-.204.4-.045.755-.11 1.06-.193.306-.084.548-.206.726-.367.177-.16.267-.396.267-.705 0-.36-.067-.65-.2-.868-.135-.218-.307-.386-.517-.502-.21-.116-.445-.193-.707-.23-.26-.04-.518-.06-.773-.06-.688 0-1.26.133-1.72.397-.458.263-.706.762-.744 1.496h-1.624c.026-.618.153-1.14.382-1.564.23-.426.535-.77.917-1.034.383-.264.82-.454 1.31-.57.49-.116 1.015-.174 1.575-.174.446 0 .89.033 1.328.097.44.063.837.195 1.194.395.356.2.643.48.86.84.216.36.324.83.324 1.41v5.136c0 .387.023.67.068.85.045.18.194.27.45.27.14 0 .304-.03.495-.096v1.275zM19.827 9.63c-.203.154-.47.267-.802.338-.33.07-.678.128-1.04.173-.364.046-.73.097-1.1.155-.368.058-.7.15-.992.28-.293.13-.532.312-.717.55-.184.238-.277.563-.277.975 0 .27.053.5.162.686.108.186.248.337.42.453.172.116.372.2.602.25.23.052.47.078.725.078.534 0 .993-.073 1.375-.22.382-.15.694-.336.936-.56.243-.226.42-.47.536-.735.114-.264.17-.512.17-.743v-1.68z"/>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="sidebarRow layerProperty" id="layerFontFace">
+                                        <div class="fontFace"></div>
+                                        <div class="addTextStyle">
+                                            <svg width="36" height="16" viewBox="0 0 36 16"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <g fill="#574751" fill-rule="evenodd">
+                                                    <path d="M32 8V4.995c0-.54-.448-.995-1-.995-.556 0-1 .446-1 .995V8h-3.005c-.54 0-.995.448-.995 1 0 .556.446 1 .995 1H30v3.005c0 .54.448.995 1 .995.556 0 1-.446 1-.995V10h3.005c.54 0 .995-.448.995-1 0-.556-.446-1-.995-1H32zM3.954 9.09l2.31-6.43h.04l2.273 6.43H3.954zM5.31 1L0 14.788h1.853l1.528-4.152h5.77l1.49 4.152h2.005L7.315 1H5.31zm17.153 13.75c-.28.166-.668.25-1.165.25-.42 0-.754-.12-1.003-.357-.248-.238-.372-.628-.372-1.17-.446.542-.965.932-1.557 1.17-.592.238-1.232.357-1.92.357-.445 0-.87-.05-1.27-.154-.4-.103-.748-.264-1.04-.483-.294-.22-.526-.506-.698-.86-.172-.354-.258-.782-.258-1.284 0-.567.096-1.03.287-1.39.19-.36.442-.654.754-.88.313-.225.67-.396 1.07-.51.402-.117.813-.214 1.233-.29.446-.09.87-.16 1.27-.204.4-.045.755-.11 1.06-.193.306-.084.548-.206.726-.367.177-.16.267-.396.267-.705 0-.36-.067-.65-.2-.868-.135-.218-.307-.386-.517-.502-.21-.116-.445-.193-.707-.23-.26-.04-.518-.06-.773-.06-.688 0-1.26.133-1.72.397-.458.263-.706.762-.744 1.496h-1.624c.026-.618.153-1.14.382-1.564.23-.426.535-.77.917-1.034.383-.264.82-.454 1.31-.57.49-.116 1.015-.174 1.575-.174.446 0 .89.033 1.328.097.44.063.837.195 1.194.395.356.2.643.48.86.84.216.36.324.83.324 1.41v5.136c0 .387.023.67.068.85.045.18.194.27.45.27.14 0 .304-.03.495-.096v1.275zM19.827 9.63c-.203.154-.47.267-.802.338-.33.07-.678.128-1.04.173-.364.046-.73.097-1.1.155-.368.058-.7.15-.992.28-.293.13-.532.312-.717.55-.184.238-.277.563-.277.975 0 .27.053.5.162.686.108.186.248.337.42.453.172.116.372.2.602.25.23.052.47.078.725.078.534 0 .993-.073 1.375-.22.382-.15.694-.336.936-.56.243-.226.42-.47.536-.735.114-.264.17-.512.17-.743v-1.68z"/>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="sidebarRow">
+                                        <div class="withLabel layerProperty" id="layerFontSize" data-label="Size:"></div>
+                                        <div class="withLabel layerProperty" id="layerTextAlign" data-label="Align:"></div>
+                                    </div>
+                                    <div class="sidebarRow withLabel layerProperty" id="layerLineHeight"
+                                         data-label="Line Height:"></div>
+                                    <div class="sidebarRow withLabel layerProperty" id="layerLetterSpacing"
+                                         data-label="Letter Spacing:"></div>
+                                </div>
+                                <div id="layerTextColor"></div>
+                            </div>
+                            <div id="layerFillContainer">
+                                <h2>Fill</h2>
+
+                                <div id="layerFills"></div>
+                            </div>
+                            <div id="layerBorderContainer">
+                                <template id="layerBorderTemplate">
+                                    <div class="sidebarRow">
+                                        <div class="borderPosition layerProperty"></div>
+                                        <div class="borderThickness layerProperty"></div>
+                                    </div>
+                                </template>
+                                <h2>Border</h2>
+
+                                <div id="layerBorders"></div>
+                            </div>
+                            <div id="layerShadowContainer">
+                                <template id="layerShadowTemplate">
+                                    <div class="sidebarRow">
+                                        <span class="shadowType"></span>
+
+                                        <div class="shadowOffsetX withLabel layerProperty" data-label="x:"></div>
+                                        <div class="shadowOffsetY withLabel layerProperty" data-label="y:"></div>
+                                    </div>
+                                    <div class="sidebarRow shadowBlurSpread">
+                                        <div class="shadowBlurRadius withLabel layerProperty"
+                                             data-label="Blur:"></div>
+                                        <div class="shadowSpread withLabel layerProperty"
+                                             data-label="Spread:"></div>
+                                    </div>
+                                </template>
+                                <h2>Shadow</h2>
+
+                                <div id="layerShadows"></div>
+                            </div>
+                            <div id="layerBlurContainer">
+                                <h2>Blur</h2>
+
+                                <div class="sidebarRow">
+                                    <span id="layerBlurType"></span>
+                                    <span id="layerBlurRadius"></span>
+                                </div>
+                            </div>
+                            <div id="layerContentContainer">
+                                <h2>
+                                    <span>Content</span>
+                                    <button type="button" id="copyLayerContent">Copy</button>
+                                </h2>
+                                <div id="layerContent" tabindex="1"></div>
+                            </div>
+                            <div id="layerAssetContainer" class="hidden">
+                                <h2>Asset</h2>
+
+                                <div class="downloadNotSupported">
+                                    Exporting assets is not working on your browser yet &#x1f614;, try it on Firefox
+                                    or Chrome.
+                                </div>
+                                <div id="layerAssetPreviewContainer">
+                                    <img crossorigin="anonymous" id="layerAssetPreview">
+                                </div>
+                                <div id="layerAssetName"></div>
+                                <div id="layerAssetExports"></div>
+                            </div>
+                            <div id="styleExportContainer">
+                                <h2>
+                                    <button id="styleOptionsButton">
+                                        <div class="styleOptionsButtonContent">
+                                            <span id="selectedStyleExportType">CSS</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">
+                                                <path fill-rule="evenodd"
+                                                      d="M9.333 15.89C8.9 15.96 8.453 16 8 16c-.454 0-.9-.038-1.333-.11v-2.04c-.68-.153-1.318-.423-1.89-.788l-1.44 1.44c-.708-.51-1.33-1.13-1.84-1.84l1.44-1.44c-.364-.57-.634-1.208-.788-1.89H.11C.04 8.9 0 8.455 0 8c0-.454.038-.9.11-1.333h2.04c.153-.68.423-1.318.788-1.89l-1.44-1.44c.51-.708 1.13-1.33 1.84-1.84l1.44 1.44c.57-.364 1.208-.634 1.89-.788V.11C7.1.04 7.545 0 8 0c.454 0 .9.038 1.333.11v2.04c.68.153 1.318.423 1.89.788l1.44-1.44c.707.51 1.33 1.13 1.838 1.84L13.06 4.77c.366.574.638 1.213.793 1.897h2.037c.072.433.11.88.11 1.333 0 .454-.038.9-.11 1.333h-2.04c-.154.684-.426 1.323-.792 1.896l1.442 1.43c-.507.71-1.13 1.33-1.837 1.84l-1.44-1.44c-.57.364-1.208.634-1.89.788v2.04zM8 11.6c1.988 0 3.6-1.612 3.6-3.6S9.988 4.4 8 4.4 4.4 6.012 4.4 8s1.612 3.6 3.6 3.6z"/>
+                                            </svg>
+                                        </div>
+                                    </button>
+                                    <button type="button" id="copyStyleContent">Copy</button>
+                                </h2>
+                                <div id="styleOptions">
+                                    <div id="styleExportTypes">
+                                        <label>
+                                            <span>CSS</span>
+                                            <paper-ripple></paper-ripple>
+                                            <input type="radio" name="styleExportType" value="css" checked>
+                                            <img src="img/icMenuCheck.svg" alt="&check;">
+                                        </label>
+                                        <label>
+                                            <span>Sass</span>
+                                            <paper-ripple></paper-ripple>
+                                            <input type="radio" name="styleExportType" value="sass">
+                                            <img src="img/icMenuCheck.svg" alt="&check;">
+                                        </label>
+                                        <label>
+                                            <span>SCSS</span>
+                                            <paper-ripple></paper-ripple>
+                                            <input type="radio" name="styleExportType" value="scss">
+                                            <img src="img/icMenuCheck.svg" alt="&check;">
+                                        </label>
+                                        <label>
+                                            <span>Less</span>
+                                            <paper-ripple></paper-ripple>
+                                            <input type="radio" name="styleExportType" value="less">
+                                            <img src="img/icMenuCheck.svg" alt="&check;">
+                                        </label>
+                                        <label>
+                                            <span>Stylus</span>
+                                            <paper-ripple></paper-ripple>
+                                            <input type="radio" name="styleExportType" value="stylus">
+                                            <img src="img/icMenuCheck.svg" alt="&check;">
+                                        </label>
+                                    </div>
+                                    <hr>
+                                    <label>
+                                        <paper-ripple></paper-ripple>
+                                        Dimensions
+                                        <input type="checkbox" id="showDimensionsCheckbox" checked>
+                                        <img src="img/icMenuCheck.svg" alt="&check;">
+                                    </label>
+                                    <label>
+                                        <paper-ripple></paper-ripple>
+                                        Unitless line-height
+                                        <input type="checkbox" id="unitlessLineHeightCheckbox" checked>
+                                        <img src="img/icMenuCheck.svg" alt="&check;">
+                                    </label>
+                                </div>
+                                <div id="layerStyle">
+                                    <textarea id="layerStyleMirror"></textarea>
+                                </div>
+                            </div>
+                            <div class="rightSidebarSpacer"></div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </main>
+        <div id="searchScreenContainer" class="hidden">
+            <div id="searchPopup">
+                <div id="searchTextContainer">
+                    <input id="screenSearchText" placeholder="Jump to Screen">
+                    <span class="shrug">¯\_(ツ)_/¯</span>
+                </div>
+                <template id="screenSuggestionTemplate">
+                    <div class="screenSuggestion">
+                        <div class="screenName"></div>
+                        <div class="tagName"></div>
+                    </div>
+                </template>
+                <div id="suggestedScreensContainer"></div>
+            </div>
+        </div>
+        <div id="manageTagsContainer" class="hidden">
+            <template id="tagOfScreenTemplate">
+                <div class="tagButton tagOfScreen">
+                    <div class="tagButtonText"></div>
+                    <img src="img/icGuidelineRemove.svg" class="removeTag">
+                </div>
+            </template>
+            <template id="tagSuggestionTemplate">
+                <div class="tagSuggestion">
+                    <div class="tagSuggestionText"></div>
+                </div>
+            </template>
+            <div id="manageTagsPopup">
+                <div id="searchTagsContainer">
+                    <input id="tagSearchText" placeholder="Enter a tag">
+                </div>
+                <div id="selectTags">
+                    <div id="noTagsOnScreen">No tags on this screen yet, add one!</div>
+                    <div id="tagsOfScreen"></div>
+                    <div id="tagSuggestions"></div>
+                    <div class="tagSuggestion hidden" id="createTagContainer">
+                        <div class="tagButton" id="createTag">
+                            <div id="createTagIcon"></div>
+                            <div class="tagButtonText">Create new tag &quot;<span></span>&quot;</div>
+                        </div>
+                    </div>
+                </div>
+                <div id="noTagsOnProject">
+                    <img id="tagIcon" src="img/icTag.svg">
+                    <div id="noTagDefinedOnProjectYet">
+                        <div id="noTagDefinedOnProjectYetText">
+                            <p>No tag defined yet.</p>
+                            <p>Go ahead, add your first tag!</p>
+                        </div>
+                        <img id="noTagDefinedOnProjectYetDart" src="img/icDart.png" srcset="img/icDart@2x.png 2x, img/icDart@3x.png 3x">
+                    </div>
+                </div>
+                <div id="manageTagsCommands">
+                    <button id="manageTagsDone">
+                        <paper-ripple></paper-ripple>
+                        DONE
+                    </button>
+                </div>
+            </div>
+        </div>
+        <template id="commentTemplate">
+            <div class="comment">
+                <div class="gravatarFrame commentAuthorImageFrame">
+                    <img width="36" height="36" class="commentAuthorImage">
+                </div>
+                <div class="commentData">
+                    <h4>
+                        <span class="commentAuthorName">Anonymous</span>
+                        <time is="relative-time" class="commentCreated"></time>
+                        <span class="commentButtons">
+                            <button type="button" class="commentEditButton">Edit</button>
+                            <button type="button" class="commentDeleteButton">Delete</button>
+                        </span>
+                    </h4>
+                    <div class="commentArea">
+                        <div class="commentWrapper">
+                            <div class="commentMirror">&nbsp;</div>
+                            <div class="commentContainer">
+                                <textarea placeholder="Type something" class="commentNote"></textarea>
+                            </div>
+                        </div>
+                        <button type="button" class="commentDoneButton"></button>
+                    </div>
+                    <time is="relative-time" class="commentEdited"></time>
+                </div>
+            </div>
+        </template>
+        <div id="dotPopup" class="hidden">
+            <div id="dotColors">
+                <div class="dotColor yellow" data-color="yellow"></div>
+                <div class="dotColor orange" data-color="orange"></div>
+                <div class="dotColor peach" data-color="peach"></div>
+                <div class="dotColor green" data-color="green"></div>
+                <div class="dotColor turquoise" data-color="turquoise"></div>
+            </div>
+            <div id="dotComments"></div>
+            <div id="newComment">
+                <button type="button" id="newCommentButton">POST</button>
+                <div id="newCommentArea">
+                    <div id="newCommentWrapper">
+                        <div id="newCommentMirror">&nbsp;</div>
+                        <div id="newCommentContainer">
+                            <textarea placeholder="Type something" id="newCommentNote"></textarea>
+                        </div>
+                    </div>
+                    <button type="button" id="newCommentSendButton"></button>
+                </div>
+            </div>
+            <template id="suggestedUsersTemplate">
+                <div class="suggestedUser">
+                    <div class="gravatarFrame suggestedUserImageFrame">
+                        <img width="36" height="36" crossorigin="anonymous" class="suggestedUserImage">
+                    </div>
+                    <div class="projectIcon"></div>
+                    <div class="suggestedUserInfo">
+                        <div class="suggestedUserName"></div>
+                        <div class="everyoneInfo"></div>
+                    </div>
+                </div>
+            </template>
+            <div id="suggestedUsersContainer" class="hidden">
+                <div id="suggestedUsersBox"></div>
+                <div id="noSuggestedUser">
+                    <div class="nooneText">
+                        It’s lonely here! &#x1f614; Guess you would not want to mention yourself?
+                    </div>
+                    <div class="nooneText">
+                        Invite people from the dashboard to poke them.
+                    </div>
+                    <div class="bigEmoji">
+                        &#x1f449;
+                    </div>
+                </div>
+            </div>
+        </div>
+        <dialog id="densityDialog">
+            <div class="densityDialogHeader">
+                <h1>Choose your screens’ densities</h1>
+                <div class="densityChangeWarning">
+                    <img src="img/icWarning.svg" alt="&#x26a0;">
+                    <p>
+                        Changing the density might affect your assets since Zeplin generates them based on this setting.<br>
+                        <strong>Please re-export your designs after changing the density.</strong>
+                    </p>
+                </div>
+            </div>
+            <form method="dialog">
+                <div class="densityDialogBody">
+                    <div class="androidDensitySelection">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th colspan="2">Phone</th>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td>
+                                    <label tabindex="1">
+                                        <input type="radio" name="androidDensity" value="mdpi" checked>
+                                        <div class="radio"><div class="radioInner"></div></div>
+                                        <span class="densityValue">mdpi</span>
+                                        <span class="densityResolution">360x640 px</span>
+                                    </label>
+                                </td>
+                                <td>
+                                    <label tabindex="3">
+                                        <input type="radio" name="androidDensity" value="xhdpi">
+                                        <div class="radio"><div class="radioInner"></div></div>
+                                        <span class="densityValue">xhdpi</span>
+                                        <span class="densityResolution">720x1280 px</span>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label tabindex="2">
+                                        <input type="radio" name="androidDensity" value="hdpi">
+                                        <div class="radio"><div class="radioInner"></div></div>
+                                        <span class="densityValue">hdpi</span>
+                                        <span class="densityResolution">480x800 px</span>
+                                    </label>
+                                </td>
+                                <td>
+                                    <label tabindex="4">
+                                        <input type="radio" name="androidDensity" value="xxhdpi">
+                                        <div class="radio"><div class="radioInner"></div></div>
+                                        <span class="densityValue">xxhdpi</span>
+                                        <span class="densityResolution">1080x1920 px</span>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <label tabindex="5">
+                                        <input type="radio" name="androidDensity" value="xxxhdpi">
+                                        <div class="radio"><div class="radioInner"></div></div>
+                                        <span class="densityValue">xxxhdpi</span>
+                                        <span class="densityResolution">1440x2560 px</span>
+                                    </label>
+                                </td>
+                            </tr>
+                        </table>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th colspan="2">Tablet</th>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td>
+                                    <label tabindex="6">
+                                        <input type="radio" name="androidTabletDensity" value="mdpi" checked>
+                                        <div class="radio"><div class="radioInner"></div></div>
+                                        <span class="densityValue">mdpi</span>
+                                    </label>
+                                </td>
+                                <td>
+                                    <label tabindex="8">
+                                        <input type="radio" name="androidTabletDensity" value="xhdpi">
+                                        <div class="radio"><div class="radioInner"></div></div>
+                                        <span class="densityValue">xhdpi</span>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label tabindex="7">
+                                        <input type="radio" name="androidTabletDensity" value="hdpi">
+                                        <div class="radio"><div class="radioInner"></div></div>
+                                        <span class="densityValue">hdpi</span>
+                                    </label>
+                                </td>
+                                <td></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="iosxDensitySelection">
+                        <label class="_1x" tabindex="1">
+                            <div class="densityRadio">
+                                <input type="radio" name="iosxDensity" value="1x" checked>
+                                <div class="radio"><div class="radioInner"></div></div>
+                                <span class="densityValue">1x</span>
+                            </div>
+                            <div class="phoneFrames">
+                                <div class="phoneFrame _320x480">320x480</div>
+                                <div class="phoneFrame _320x568">320x568</div>
+                                <div class="phoneFrame _375x667">375x667</div>
+                                <div class="phoneFrame _414x736">414x736</div>
+                            </div>
+                        </label>
+                        <label class="_2x" tabindex="2">
+                            <div class="densityRadio">
+                                <input type="radio" name="iosxDensity" value="2x" checked>
+                                <div class="radio"><div class="radioInner"></div></div>
+                                <span class="densityValue">2x</span>
+                            </div>
+                            <div class="phoneFrames">
+                                <div class="phoneFrame _640x960">640x960</div>
+                                <div class="phoneFrame _640x1136">640x1136</div>
+                                <div class="phoneFrame _750x1334">750x1334</div>
+                            </div>
+                        </label>
+                        <label class="_3x" tabindex="3">
+                            <div class="densityRadio">
+                                <input type="radio" name="iosxDensity" value="3x" checked>
+                                <div class="radio"><div class="radioInner"></div></div>
+                                <span class="densityValue">3x</span>
+                            </div>
+                            <div class="phoneFrames">
+                                <div class="phoneFrame _1242x2208">1242x2208</div>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="webDensitySelection">
+                        <label tabindex="1">
+                            <input type="radio" name="webDensity" value="1x" checked>
+                            <div class="radio"><div class="radioInner"></div></div>
+                            <span class="densityValue">1x</span>
+                        </label>
+                        <hr>
+                        <label tabindex="2">
+                            <input type="radio" name="webDensity" value="2x">
+                            <div class="radio"><div class="radioInner"></div></div>
+                            <span class="densityValue">2x</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="densityDialogFooter">
+                    <a href="#" id="densityHelp">
+                        <img src="img/icInfo.svg">
+                        What I need to choose?
+                    </a>
+                    <div id="densityTooltip" class="hidden">
+                        <div class="tooltipGeneralExplanation">
+                            This should ideally be selected once, representing the <strong><em>"resolution of the designs"</em></strong>.
+                        </div>
+                        <div class="platformTooltip">
+                            <div class="androidTooltip">e.g. for a <strong>720×1280px</strong> screen, you should select <strong>"xhdpi"</strong>. With this setting, if a measurement is 20px in Sketch, Zeplin will show it as 10dp to help developers out (since they use 1x values while coding).</div>
+                            <div class="iosxTooltip">e.g. for a <strong>640×1136px</strong> screen, you should select <strong>"2x"</strong>. With this setting, if a measurement is 20px in Sketch, Zeplin will show it as 10pt to help developers out (since they use 1x values while coding).</div>
+                            <div class="webTooltip">e.g. for a <strong>2048×1536px</strong> screen, you should select <strong>"2x"</strong>. With this setting, if a measurement is 20px in Sketch, Zeplin will show it as 10px to help developers out (since they use 1x values while coding).</div>
+                        </div>
+                    </div>
+                    <div class="buttonContainer">
+                        <button id="densityDialogCancelButton" class="cancel">
+                            CANCEL
+                            <paper-ripple></paper-ripple>
+                        </button>
+                        <button id="densityDialogSubmitButton" class="done" autofocus>
+                            CHANGE
+                            <paper-ripple></paper-ripple>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </dialog>
+        <div id="planChooserOverlay" class="hidden">
+            <div id="planChooser">
+                <h2>Upgrading makes you feel lightweight.</h2>
+                <div id="discountNotice">&nbsp;</div>
+                <div id="paymentPeriods">
+                    <input type="radio" name="paymentPeriod" value="monthly" id="monthlyPayment">
+                    <label for="monthlyPayment" class="monthly">Monthly</label>
+                    <input type="radio" name="paymentPeriod" value="annual" id="annualPayment">
+                    <label for="annualPayment" class="annual">Annual</label>
+                    <div id="paymentPeriodSlider">
+                        <span class="monthly">Monthly</span>
+                        <span class="annual">Annual</span>
+                    </div>
+                </div>
+                <form method="post" id="couponForm" novalidate>
+                    <div id="couponWrapper" title="Discount code">
+                        <div class="inputArea couponArea">
+                            <input type="text" name="couponCode" id="couponCode" maxlength="30" required autocapitalize="none">
+                            <div class="couponPlaceholder">Have a discount code?</div>
+                            <button id="applyCouponButton">
+                                <paper-ripple></paper-ripple>
+                                Apply
+                            </button>
+                            <label for="couponCode" class="couponLabel">Discount code</label>
+                            <div class="couponUnderline"></div>
+                        </div>
+                    </div>
+                </form>
+                <table id="pricingTable">
+                    <tr class="plan free current" data-plan-id="free">
+                        <td class="planName">FREE</td>
+                        <td class="planProjectCount">1 active project</td>
+                        <td>
+                            <div class="price">
+                                <data value="" class="planPrice"></data>
+                            </div>
+                        </td>
+                        <td>
+                            <span class="currentPlanIndicator">CURRENT PLAN</span>
+                            <button type="button" class="paper-button" id="cancelPlanButton">CANCEL PLAN</button>
+                        </td>
+                    </tr>
+                    <tr class="plan starter" data-plan-id="starter">
+                        <td class="planName">STARTER</td>
+                        <td class="planProjectCount">3 active projects</td>
+                        <td>
+                            <div class="price">
+                                <data value="" class="planPrice"></data>
+                                <div class="originalPrice">15</div>
+                            </div>
+                        </td>
+                        <td>
+                            <span class="currentPlanIndicator">CURRENT PLAN</span>
+                            <button type="button" class="paper-button">CHOOSE PLAN</button>
+                        </td>
+                    </tr>
+                    <tr class="plan growing" data-plan-id="growing">
+                        <td class="planName">GROWING BUSINESS</td>
+                        <td class="planProjectCount">8 active projects</td>
+                        <td>
+                            <div class="price">
+                                <data value="" class="planPrice"></data>
+                                <div class="originalPrice">25</div>
+                            </div>
+                        </td>
+                        <td>
+                            <span class="currentPlanIndicator">CURRENT PLAN</span>
+                            <button type="button" class="paper-button">CHOOSE PLAN</button>
+                        </td>
+                    </tr>
+                    <tr class="plan company" data-plan-id="company">
+                        <td class="planName">COMPANY</td>
+                        <td class="planProjectCount">Unlimited projects</td>
+                        <td>
+                            <div class="price">
+                                <data value="" class="planPrice"></data>
+                                <div class="originalPrice">100</div>
+                            </div>
+                        </td>
+                        <td>
+                            <span class="currentPlanIndicator">CURRENT PLAN</span>
+                            <button type="button" class="paper-button">CHOOSE PLAN</button>
+                        </td>
+                    </tr>
+                </table>
+                <div id="teamNotice">
+                    <img src="img/icTeamMates.svg" alt="Teammates" title="Teammates">
+                    <div>
+                        <div>All plans include <strong>unlimited team members.</strong></div>
+                        <div>You can always change your plan, upgrade or downgrade.</div>
+                    </div>
+                </div>
+                <div id="miniFAQ">
+                    <section>
+                        <h3>What is an "active" project?</h3>
+                        <p>
+                            <span>Active projects are the projects you are currently working on. If you’re done working on a project, you can archive it and it won’t be counted against your total. Technically you could have hundreds of archived projects and still fit on the $25/mo plan as long as you have no more than 8 active projects.</span>
+                        </p>
+                    </section>
+                    <section>
+                        <h3>Does everyone on my team need to subscribe?</h3>
+                        <p>
+                            <span>No! You only need to subscribe with one account. This account can create the projects, invite others and assign admins to manage the projects as necessary. All the invited team members can use Zeplin with their individual accounts and upload designs.</span>
+                        </p>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <div id="loading" class="hidden">
+            <div class="ripple ripple1"></div>
+            <div class="ripple ripple2"></div>
+            <div class="ripple ripple3"></div>
+            <div class="ripple ripple4"></div>
+        </div>
+    </body>
+</html>
