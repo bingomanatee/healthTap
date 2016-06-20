@@ -10,14 +10,12 @@ import articleAPI from './../apis/articles';
 import {STATUS_ERROR, STATUS_LOADED, STATUS_LOADING, store} from './../stores/store';
 import {addArticles} from './../actions/articles';
 import {connect} from 'react-redux';
-
 class AppComponent extends React.Component {
     constructor(props) {
         super(props);
         this.state = {status: STATUS_LOADING, articles: []};
         articleAPI.get('pregnancy')
             .then(result => {
-                console.log('result:', result);
                 store.dispatch(this.props.addArticles(result.articles))
             });
     }
@@ -56,7 +54,6 @@ class AppComponent extends React.Component {
 AppComponent.defaultProps = {status: STATUS_LOADING};
 
 const stateToProps = (state) => {
-    console.log('state:', state);
     return state;
 };
 const dispatchToProps = (dispatch) => ({

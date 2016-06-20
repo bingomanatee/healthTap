@@ -7,7 +7,7 @@ const star = require('../images/stars/star.png');
 const stars = n => {
     let out = [];
     for (let i = 0; i < n; ++i) {
-        out.push(<div className="star-component__star"><img src={star}/></div>);
+        out.push(<div className="star-component__star" key={`star-${i}`}><img src={star}/></div>);
     }
     return out;
 };

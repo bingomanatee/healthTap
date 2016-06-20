@@ -38,7 +38,7 @@ class ArticleComponent extends React.Component {
     }
 
     render() {
-        let style = {marginTop: '2rem'};
+        let style = {marginTop: this.props.first ? '0.5rem' : '2rem'};
         let text = (
             <div key={this.state.articleName}><p className="article-component__text">
                 {this.props.answer}</p>
@@ -63,7 +63,7 @@ class ArticleComponent extends React.Component {
             </div>
         );
 
-        const calloutStyle = this.props.calloutImage ? {'background-image': this.props.calloutImage} : '';
+        const calloutStyle = this.props.calloutImage ? {'backgroundImage': this.props.calloutImage} : '';
 
         let callout = this.props.calloutImage ? (<div key="callout-image" className="article-component__callout" style={calloutStyle}>
             <img src={this.props.calloutImage}/>
@@ -77,7 +77,7 @@ class ArticleComponent extends React.Component {
 
         return (
 
-            <div style={style} className="article-component">
+            <div style={style} className="article-component" key={this.state.articleName}>
                 <div className="article-component__title">
                     <div className="article-component__title-image">
                         <img src={this.props.authorImage}/>

@@ -1,9 +1,28 @@
 @import './core.scss';
 
 html, body {
-    background-color: $page-background-color;
+  background-color: $page-background-color;
 }
 
 * {
   font-family: Roboto-Regular;
+}
+
+.header {
+  z-index: 1;
+  max-width: $content-width;
+  background-image: url(../images/pregnancy/img.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 200px;
+  display: flex;
+  flex-direction: column-reverse;
+  h2 {
+    color: white;
+    font-size: 25px;
+    font-family: Roboto-Light, Roboto;
+    font-weight: 200;
+    margin: 1rem;
+    padding: 0;
+  }
 }

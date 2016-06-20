@@ -2,4 +2,6 @@
 
 .content-component {
   margin-bottom: 1000px;
+  max-width: $content-width;
+  z-index: -1000;
 }

@@ -5,6 +5,8 @@
   flex-direction: row;
   padding: $page-margin;
   max-width: $content-width;
+  z-index: 1000;
+  position: relative;
 }
 
 .title-component__logo {
