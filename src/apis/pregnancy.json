@@ -2,8 +2,8 @@
   "articles": [
     {
       "author": "Dr. Rotundra Brown",
-      "authorImage": "/images/rBrown/oval-112.png",
-      "calloutImage": "/images/rBrown/callout.png",
+      "authorImage": "images/rBrown/oval-112.png",
+      "calloutImage": "images/rBrown/callout.png",
       "in-brief": "Personal decision",
       "question": "Why do people terminate pregnancies after getting test results?",
       "answer": "If you're pregnant or planning to get pregnant, there are many things you can do to give your baby a healthy start: Regular prenatal visits along with laboratory testing, ultrasounds, prenatal vitamins and immunizations (like the flu shot and whopping cough booster). Now's the time to eat healthy, stay hydrated, and get plenty of rest for the rest of your life.!",
@@ -13,8 +13,8 @@
     },
     {
       "author": "Dr. Elliot Baker",
-      "authorImage": "/images/eBaker/oval-112.png",
-      "calloutImage": "/images/eBaker/callout.png",
+      "authorImage": "images/eBaker/oval-112.png",
+      "calloutImage": "images/eBaker/callout.png",
       "in-brief": "Yes",
       "question": "Are teegnage pregnancies higher risk??",
       "answer": "Medically speaking, they are at higher risk for preterm birth, low birth weight, and increased infant mortality. They also have higher rates of depression and children with delayed cognitive abilities. This doesn't include the huge socioeconomic burden that teenage pregnancy brings to the table.",
@@ -24,7 +24,7 @@
     },
     {
       "author": "Dr. Amy Willis",
-      "authorImage": "/images/aWillis/oval-112.png",
+      "authorImage": "images/aWillis/oval-112.png",
       "calloutImage": false,
       "in-brief": "Yes",
       "question": "I have a question about pregnancies and youth. I would like to go further into detail if I get a response.",
